@@ -1,0 +1,66 @@
+{
+  "model": "gpt-5.6-terra",
+  "persona": "바쁜 실무 운영 리드: 일상적인 표현, 논리적 순서, 정확한 담당·조건·시각을 중시하며 비기술 독자를 포함한 지정 독자에게 맞는 글을 본다",
+  "cases": [
+    {
+      "id": "ko-slack",
+      "scores": {"plain_words": 10, "flow": 9, "clarity": 10, "no_slop": 10, "genre_fit": 10},
+      "total": 98,
+      "verdict": "ready",
+      "strongest_feature": {"quote": "같은 날 정오 KST까지 가능한 완료 시간을 알려 주세요.", "reason": "마감 불가 시의 통보 시점과 내용이 바로 이어져 수신자가 지체 없이 행동할 수 있다."},
+      "issues": [],
+      "answers": ["민서가 공유 문서 각 행의 ‘확인 결과’에 ‘사용 가능’ 또는 수정 의견을 2026년 10월 9일 오후 3시 KST까지 남긴다. 발신자가 같은 날 오후 4시 KST에 디자인팀에 의견을 전달한다.", "민서가 기한을 맞추기 어렵다면 같은 날 정오까지 가능한 완료 시간을 알린다. 그러면 발신자가 디자인팀에 기존 문구를 쓴 임시 시안을 요청한다."]
+    },
+    {
+      "id": "en-professional",
+      "scores": {"plain_words": 9, "flow": 10, "clarity": 10, "no_slop": 10, "genre_fit": 10},
+      "total": 98,
+      "verdict": "ready",
+      "strongest_feature": {"quote": "We assessed understanding from their explanations, rather than treating the button click itself as proof.", "reason": "행동 성공과 이해를 명확히 구분해 다음 라벨 결정을 과장 없이 읽게 한다."},
+      "issues": [
+        {"quote": "the first task may still have taught people how the second task worked", "problem": "순서 효과의 가능성을 정확히 적지만, 비전문 독자에게는 비교 결과를 얼마나 조심해 읽어야 하는지 한 번 더 풀어 말한 문장이 있으면 더 빠르게 이해된다.", "reader_effect": "제품 리드가 작은 수치 차이를 강한 우위로 받아들일 여지가 조금 남는다.", "suggested_direction": "권고 바로 근처에 순서 효과 때문에 두 라벨 차이를 단정할 수 없다는 짧은 연결을 둔다.", "severity": "minor"}
+      ],
+      "answers": ["다음 프로토타입에서는 미완료 요청을 저장하는 단계에 ‘Save for later’를 쓰고, 승인자에게 보내는 별도 행동에는 ‘Submit request’를 유지한다. 올바른 버튼 클릭만으로 이해가 증명되지는 않으며, 설명으로 이해를 평가했다.", "‘Save for later’가 나중에 자동 제출된다는 오해를 새 참가자 8명과 2026년 10월 6일 출시 검토 전까지 확인해야 한다. 영어·데스크톱만 시험했고 번역 라벨, 모바일, 스크린 리더 사용자, 실제 교대 마감 압박은 시험하지 않았다."]
+    },
+    {
+      "id": "en-business",
+      "scores": {"plain_words": 9, "flow": 9, "clarity": 8, "no_slop": 10, "genre_fit": 9},
+      "total": 90,
+      "verdict": "minor_edit",
+      "strongest_feature": {"quote": "Ownership will not transfer automatically at that review.", "reason": "19일 검토 자체가 인계 완료라는 잘못된 운영 해석을 단호하게 막는다."},
+      "issues": [
+        {"quote": "The next readiness review will take place at 12:00 UTC on 19 October 2026. Ownership will not transfer automatically at that review.", "problem": "19일에 준비 완료로 판정될 경우 누가 실제 인계 시각을 정하고 고객에게 어떻게 알리는지가 정해져 있지 않다.", "reader_effect": "준비 지연 뒤의 고객 문의 담당이 검토 직후에도 불확실해질 수 있다.", "suggested_direction": "이것은 저자가 남긴 미결 결정이므로, 19일 검토 뒤 인계 시각·통지 담당을 정하는 규칙을 확정해 계획에 넣는다.", "severity": "material"}
+      ],
+      "answers": ["IT 접근권과 Finance 청구 에스컬레이션 연락처 중 하나라도 10월 16일 16:00 UTC에 열려 있으면 Arun이 BEACON-42에 ‘Not ready’를 남기고 Launch가 고객 요청을 계속 처리한다. 10월 19일 검토는 자동 인계가 아니다. 인계 자료의 미해결 공백이 준비 완료를 막는지와 그 뒤 새 인계 시각 합의 방법은 저자의 미결 질문으로 남아 있다.", "최종 검토는 10월 30일 15:00 UTC이며, Launch 책임은 그 시각에 자동 종료되지 않는다. 남은 모든 결함에 엔지니어 담당자와 다음 업데이트 날짜가 먼저 있어야 끝난다. 조사 중에는 Support가 고객과 계속 소통하고, Launch가 설정 결함을 조사한다."]
+    },
+    {
+      "id": "en-slack",
+      "scores": {"plain_words": 10, "flow": 10, "clarity": 8, "no_slop": 10, "genre_fit": 10},
+      "total": 96,
+      "verdict": "minor_edit",
+      "strongest_feature": {"quote": "We need the names settled before Leo records the walkthrough at 16:00 UTC that day", "reason": "짧은 마감의 업무상 이유를 바로 제시해 요청의 우선순위가 납득된다."},
+      "issues": [
+        {"quote": "reply in this thread with \"Approved\" or the required corrections", "problem": "수정 의견을 제때 남긴 경우 그것이 대체안 적용을 막는 승인인지, 수정 후 별도 승인이 필요한지 정하지 않는다.", "reader_effect": "15:00 직전에 수정이 들어오면 슬라이드·녹화에 무엇을 쓸지 발신자와 Priya가 다르게 이해할 수 있다.", "suggested_direction": "저자가 남긴 미결 결정으로, 수정 회신의 승인 효력과 수정 반영 뒤 확인 절차를 한 문장으로 정한다.", "severity": "material"}
+      ],
+      "answers": ["Priya가 `demo-accounts-v2`의 계정명 세 개를 확인하고 2026년 10월 8일 15:00 UTC까지 이 스레드에 ‘Approved’ 또는 필요한 수정을 답한다. 발신자가 수정 사항을 슬라이드에 반영한다. 16:00 UTC에 Leo가 녹화를 시작하므로 그 전에 이름을 확정해야 한다.", "Priya가 15:00까지 마칠 수 없으면 그 시각까지 스레드에 알린다. 그때까지 승인이 없으면 발신자가 두 자료에 ‘Sample account A/B/C’를 쓴다. 다만 수정 회신만으로 대체안을 막는 승인인지 여부는 저자의 미결 질문이며 글에서 확정하지 않는다."]
+    },
+    {
+      "id": "ko-holdout",
+      "scores": {"plain_words": 10, "flow": 10, "clarity": 10, "no_slop": 10, "genre_fit": 10},
+      "total": 100,
+      "verdict": "ready",
+      "strongest_feature": {"quote": "관리자도 문서의 작성자를 바꿀 수는 없습니다.", "reason": "권한이 넓은 역할의 경계를 흔한 오해가 생길 자리에서 정확히 끊어 준다."},
+      "issues": [],
+      "answers": ["열람자는 읽기만 가능하고 다운로드는 못 한다. 편집자는 읽기·수정·다운로드가 가능하지만 역할 변경은 못 한다. 관리자는 초대와 역할 변경까지 가능하나 작성자는 바꿀 수 없다. 이미 내려받은 파일은 회수할 수 없다.", "지수는 업무상 다운로드가 필요한 현재 열람자와 이유를 10월 16일 오후 2시 KST까지 권한 검토표에 적고, 없으면 ‘해당 없음’을 남긴다. 늦으면 같은 시각까지 예상 완료일을 알린다. 늦어도 변경 일정과 역할은 자동으로 바뀌지 않으며, 열람자는 변경 뒤에도 다운로드할 수 없다."]
+    },
+    {
+      "id": "en-holdout",
+      "scores": {"plain_words": 10, "flow": 10, "clarity": 10, "no_slop": 10, "genre_fit": 10},
+      "total": 100,
+      "verdict": "ready",
+      "strongest_feature": {"quote": "The system does not quietly download the first 5,000 rows: a partial file could look complete", "reason": "제한의 동작과 이유를 비기술 독자도 바로 이해할 수 있게 연결한다."},
+      "issues": [],
+      "answers": ["아니다. Owner는 내보내기를 켤 수 있지만 Owner라는 지위만으로 Analyst 권한을 얻지는 않는다. 필터 적용 후 정확히 5,000행은 내보낼 수 있고, 5,001행부터는 다운로드가 막히며 일부 5,000행 파일을 받지 않는다.", "Leah는 2026년 10월 12일 11:00 UTC까지 `MARLIN-18`에서 교육용 워크스페이스의 exports 활성화와 두 강사의 Analyst 권한을 확인해야 한다. 둘 중 하나라도 없으면 준비한 예시 CSV로 교육을 진행하고 접근 문제를 후속 조치로 기록한다."]
+    }
+  ]
+}

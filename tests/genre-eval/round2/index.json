@@ -1,0 +1,72 @@
+[
+  {
+    "id": "ko-slack",
+    "genre": "Slack request",
+    "audience": "문구 검토 동료 민서",
+    "file": "texts/ko-slack.md",
+    "questions": [
+      "누가 어디에 어떤 결과를 언제까지 남겨야 하는가? 그 뒤 누가 언제 디자인팀에 전달하는가?",
+      "기한을 지키기 어렵다면 언제 무엇을 알려야 하며, 누가 어떤 대안을 진행하는가?"
+    ],
+    "author_queries": []
+  },
+  {
+    "id": "en-professional",
+    "genre": "professional usability study report",
+    "audience": "Non-specialist product leads deciding which label to test next",
+    "file": "texts/en-professional.md",
+    "questions": [
+      "What wording is recommended, for which stage, and does a correct button click prove that people understood it?",
+      "What remaining misunderstanding must be checked, with whom and by when, and which broader groups or conditions were not tested?"
+    ],
+    "author_queries": []
+  },
+  {
+    "id": "en-business",
+    "genre": "cross-team handover plan",
+    "audience": "Launch, Support, IT, Finance, and Sales teams running a fictional pilot",
+    "file": "texts/en-business.md",
+    "questions": [
+      "Who handles requests if the readiness dependencies remain open, and does the October 19 review automatically transfer ownership?",
+      "How does the time of the final review relate to ending Launch's responsibility? What must happen first, and who communicates with customers during investigation?"
+    ],
+    "author_queries": [
+      "The source does not specify whether unresolved gaps in the handover materials block readiness, or how a new transfer time is agreed after the 19 October readiness review. These rules have not been invented."
+    ]
+  },
+  {
+    "id": "en-slack",
+    "genre": "polite Slack request",
+    "audience": "Priya, who owns the customer naming check for a demo",
+    "file": "texts/en-slack.md",
+    "questions": [
+      "Who needs to do what, where, and by what exact deadline? Why is that deadline needed?",
+      "Which condition triggers Priya's notice, which triggers the sender's fallback, and does the text establish whether corrections alone count as approval?"
+    ],
+    "author_queries": [
+      "The source permits a reply with corrections but does not specify whether those corrections also count as approval for the fallback decision."
+    ]
+  },
+  {
+    "id": "ko-holdout",
+    "genre": "mixed technical explanation and Slack request",
+    "audience": "기술 배경이 없는 운영팀 담당자",
+    "file": "texts/ko-holdout.md",
+    "questions": [
+      "역할별로 무엇을 할 수 있는가? 관리자는 작성자를 바꿀 수 있는가? 이미 내려받은 파일은 어떻게 되는가?",
+      "지수는 언제까지 무엇을 해야 하며, 확인이 늦으면 적용 일정이나 역할이 자동으로 바뀌는가?"
+    ],
+    "author_queries": []
+  },
+  {
+    "id": "en-holdout",
+    "genre": "mixed technical explanation and Slack request",
+    "audience": "Nonengineer colleagues preparing a training session",
+    "file": "texts/en-holdout.md",
+    "questions": [
+      "Does Owner status alone permit a CSV export? What happens at exactly 5,000 filtered rows and at 5,001?",
+      "What must Leah confirm, where and by when? What happens to training if either requirement is missing?"
+    ],
+    "author_queries": []
+  }
+]

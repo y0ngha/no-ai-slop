@@ -1,89 +1,88 @@
-# Korean AI slop
+# 한국어 편집 지침
 
-Load this when the draft is in Korean. Everything in `SKILL.md` still applies. This file adds the slop that only shows up in Korean, plus checks to run before returning the draft.
+SKILL.md의 공통 원칙과 함께 적용한다. 영어로 번역했다가 되돌리지 말고 한국어 문장 자체의 호응과 흐름을 읽는다. 아래 표현은 점검 신호다. 단어가 있다는 이유만으로 고치지 않는다.
 
-Edit in Korean. Do not translate the draft to English and back. Keep the writer's speech level (합니다체, 해요체, 해라체, 반말) unless they ask to change it, and keep it consistent.
+## 말투와 글의 목적
 
-## Before applying anything below
+원문의 합니다체·해요체·해라체·반말과 독자와의 거리를 유지한다. 문서 종류만 보고 사내 문서는 무조건 평어, 대외 문서는 무조건 존댓말로 바꾸지 않는다. 친근한 안내문의 해요체도 자연스럽다.
 
-**Check the register first.** Some patterns below come from persuasive Korean: posts, newsletters, announcements, marketing copy. On a 기술문서, 명세, 보고서, or 회의록, switch off exactly these six: 이분 대조, 과장된 훅, 콜론 드러내기, 단조로운 리듬, 형식 슬롭, 상투적 마무리. A spec that reads flat is doing its job. For that draft these six also override the em dash, robotic rhythm, and formatting rules in `SKILL.md` **and the matching checks in `eval.md`**: do not fail a Korean spec for its em dashes, its bold openers, or for ending every declarative in ~다, which 해라체 grammar requires. A personal 회고 or 포스트모템 is not a spec; leave all six on.
+필자의 서술에서 이유 없이 말투가 섞인 곳은 주변에 맞춘다. 인용문, 대화, UI 문구는 각각의 말투를 유지한다. 해라체 문장이 모두 ‘다’로 끝나는 것은 반복 문제가 아니다. 리듬을 바꾸려고 ‘죠’, ‘고요’를 끼워 넣지 않는다.
 
-Everything else stays on. 관공서투 한자어, 사물존칭, 출처 없는 인용, filler transitions, 요약 반복 마무리 are more common in a 보고서 or 공문 than in a blog post, not less.
+쉬운 글이 반드시 구어체일 필요는 없다. 보고서의 ‘추정한다’를 ‘어림잡는다’로 바꿀 이유는 없고, 개인 회고의 ‘한참 씨름했다’를 무조건 지울 이유도 없다. 정확성과 독자에게 익숙한 정도로 판단한다.
 
-**Never edit inside a verbatim quote.** 인용문, 코드 블록, 서버 응답, UI 문구, 에러 메시지. A quote in 습니다체 inside a 해라체 draft is not mixed register.
+## 번역투와 문장 호응
 
-**Keep product and code vocabulary.** 인덱스 최적화, 장애 대응 훈련, 결제 승인 지연. These map to code and to what the team says out loud, so they are not noun pileups or ~화 slop even when they look like one.
+**동사로 풀면 읽기 쉬운 명사 나열.** ‘검토를 진행한다’는 ‘검토한다’로, ‘확인 작업을 수행한다’는 ‘확인한다’로 줄일 수 있다. ‘점검 항목 관리 기준 수립 방안’은 ‘점검 항목을 관리할 기준을 세우는 방법’으로 풀면 관계가 보인다. 다만 표의 짧은 항목명과 ‘인덱스 최적화’, ‘결제 승인 지연’ 같은 통용어는 유지한다.
 
-**Ask, never invent.** Every rule below asks for a name, number, actor, or mechanism the draft may not have. When it is missing, say so and ask the writer. Do not supply a plausible one. If honest cutting leaves a stub, hand the stub back with the question instead of padding it.
+**조사와 관형절의 중첩.** ‘~의’, ‘~에 대한’, ‘~에 있어서’, ‘~와 관련하여’, ‘~을 통해’가 겹치면 주어와 서술어를 가리는지 본다.
 
-## Words and endings to cut
+- ‘시스템의 성능의 개선을 위한 설정’ → ‘시스템 성능을 개선하는 설정’
+- ‘기록할지에 대한 공통 기준’ → ‘기록할지 정하는 공통 기준’
+- ‘파일을 가지고 있는 상태입니다’ → ‘파일이 있습니다’
+- ‘고객에 대한 책임’, ‘창문을 통해 들어온 빛’처럼 관계나 경로가 정확한 표현은 그대로 둔다.
 
-Empty modifiers: 다양한, 여러 가지, 수많은, 효율적인, 체계적인, 전략적인, 혁신적인, 핵심적인, 근본적인, 실질적인. Replace with the number, name, or mechanism when the draft has one. When it does not, ask, and keep the word if the plurality itself is the fact ("여러 채널에서 모았다").
+**주어와 서술어의 거리.** 조건과 부연이 겹쳐 누가 무엇을 하는지 놓치면 문장을 나눈다. 글자 수나 접속사 수로 무조건 자르지 않는다. 나누면서 조건·예외가 어느 행동에 적용되는지 바뀌지 않았는지 확인한다.
 
-Inflated claims: 게임 체인저, 판도를 바꾸는, 혁명적인, 패러다임의 전환, 새로운 지평, 필수불가결한, 바야흐로 ~의 시대. Also translated idioms: 하루가 끝날 무렵, 양날의 검, 빙산의 일각, 다음 단계로 나아갈 때, ~는 시간 문제입니다.
+**피동과 무생물 주어.** 이중 피동과 불필요한 우회를 줄인다. ‘결과가 보여집니다’는 ‘결과가 보입니다’로 고친다. 행위자가 원문에 있고 책임을 밝혀야 하면 능동으로 쓴다. 행위자를 모르면 팀이나 담당자를 지어내지 않는다.
 
-Hedging endings used as a default: ~라고 할 수 있습니다, ~인 것 같습니다, ~라고 볼 수 있습니다, ~할 필요가 있습니다, ~이 아닐까 싶습니다, ~것으로 보입니다. The lists in this file are written in 습니다 form; match them against the draft's own ending (~라고 볼 수 있다, ~라고 볼 수 있어요). Keep them when the writer is genuinely unsure or is leaving a decision open on purpose. Cut them when they only soften a plain claim. "이 방식이 더 빠르다고 할 수 있습니다" becomes "이 방식이 더 빠릅니다."
+‘서버가 만료된 토큰을 거부한다’, ‘오류가 발생했다’, ‘파일이 삭제됐다’는 문맥에 맞으면 그대로 둔다. 도구를 주어로 썼다는 이유만으로 틀린 문장은 아니다. ‘이 기능은 사용자에게 편리함을 선사한다’처럼 실제 동작을 가리는 표현을 고친다. ‘~게 되다’도 변화의 경위나 의도하지 않은 결과를 나타내면 유지한다.
 
-Filler transitions: 또한, 아울러, 뿐만 아니라, 무엇보다, 한편, 결론적으로, 정리하자면, 마지막으로. Also 문두 접속부사 repeated every sentence: 그리고, 그래서, 하지만, 따라서, 즉. Keep one when it names a real relation. Cut the rest.
+**부정과 가능성.** ‘못 찾았다’, ‘찾지 못했다’ 모두 쓸 수 있다. 위치만 보고 교정하지 않는다. ‘아직 확인하지 않았다’를 ‘확인할 수 없다’로 바꾸면 사실이 달라진다. ‘~일 수 있다’, ‘~로 보인다’는 실제 불확실성을 나타내면 남긴다. ‘검토가 필요하다’도 근거 없이 ‘검토해야 한다’로 강화하지 않는다.
 
-관공서투 한자어: 당사, 금번, 상기, 하기와 같이, ~에 대하여, ~인 바, 제고, 인지되다, 기 언급한. Use the plain Korean word unless the document type genuinely requires the formal register.
+## 어휘와 구체성
 
-## Patterns to cut
+‘혁신적인’, ‘획기적인’, ‘효율적인’, ‘체계적인’, ‘다양한’, ‘실질적인’이 무엇을 뜻하는지 문맥에서 확인한다. 원문에 행동이나 결과가 있으면 그것을 중심으로 쓴다. 근거 없이 수치나 사례를 추가하지 않는다. ‘여러 채널에서 모았다’처럼 정확한 수를 몰라도 복수라는 사실이 필요한 문장은 유지한다.
 
-**번역투 (translationese).** "~에 대한", "~을 통해", "~에 있어서", "~로 인해", "~와 관련하여", "~에 기반하여", "~을 가지고 있다", "~하는 것이 가능하다", "가장 ~한 것 중 하나". These are English grammar wearing Korean. Rewrite with a Korean verb, keeping the original tense and modality. "배포 시간 단축에 대한 개선이 가능합니다" becomes "배포 시간을 줄일 수 있습니다."
+‘당사’, ‘금번’, ‘상기’, ‘제고’ 같은 관공서투는 독자와 문서 목적에 맞춰 더 익숙한 말로 바꾼다. ‘신뢰성’, ‘최적화’, ‘확장성’처럼 통용되는 용어는 한자어라는 이유로 풀어헤치지 않는다. ‘과금 축’, ‘실행 층위’처럼 새로 만든 추상 표현은 실제로 가리키는 기준이나 관계를 쓴다.
 
-**~의 남발.** Genitive stacking copied from English and Japanese. "저희 회사의 성장의 원동력의 핵심" becomes "저희 회사가 성장한 이유". Korean drops 의 far more often than English drops "of".
+한글로 충분한 말을 불필요하게 영어로 섞지 않는다. 다만 API, SDK, 제품명, 코드 식별자와 독자가 사용하는 기술어는 보존한다. ‘리소스’가 서버 자원인지 API 리소스인지 확인하지 않고 일괄 치환하지 않는다. 같은 대상을 ‘사용자’, ‘유저’, ‘이용자’로 돌려 부르지 않되, 다른 역할을 하나의 용어로 합치지 않는다.
 
-**과잉 존대와 사물존칭.** The loudest tell in Korean AI copy. "커피 나오셨습니다", "가격이 5만원이십니다", "확인이 필요하십니다". Objects and abstractions do not take 시. Also cut stacked 과공 표현: "말씀드리고 싶은 부분은 ~ 참고해 주시기 바랍니다."
+‘미리 사전 검토’, ‘새로운 신규 기능’, ‘약 10여 명 정도’ 같은 겹말은 뜻을 유지하며 줄인다. 의무를 나타내는 ‘반드시’, 범위를 한정하는 ‘일부’, ‘최대’, ‘~만’은 군더더기로 지우지 않는다.
 
-**이중 피동 (double passive).** 보여집니다, 쓰여집니다, 잊혀집니다, 생각되어집니다. One passive marker is enough, and an active verb is usually better. "결과가 보여집니다" becomes "결과가 보입니다."
+## 지시어, 주어 생략, 존대
 
-**주어 없는 피동 (agent-hiding passive).** "~이 결정되었습니다", "~이 추진되고 있습니다", "~이 도출되었습니다". Name the actor the draft already gives: "저희 팀은 기준을 다시 잡았고, 새 정책이 결정되었습니다" becomes "저희 팀은 기준을 다시 잡고 새 정책을 정했습니다." If the draft never says who, ask the writer rather than naming a plausible team. Leave the passive when the actor is named nearby, is genuinely irrelevant, or when the missing actor is itself the point ("아직 안 정해졌다").
+한국어는 문맥상 분명한 주어를 생략할 수 있다. 모든 문장이 홀로 완결되도록 긴 이름을 반복하지 않는다. 따로 읽는 절차나 표에서 ‘이는’, ‘이 방식’, ‘위 내용’의 대상이 모호하면 이름이나 행동을 다시 쓴다. ‘이 문서’, ‘그 항목’처럼 명사를 한정하는 말도 일괄 삭제하지 않는다.
 
-**명사화 (noun pileups).** "품질 개선 작업 진행", "고객 만족도 향상 방안 마련", "데이터 기반 의사결정 체계 구축". Verbs are buried inside nouns and the reader has to re-parse. Unpack into a sentence. Three or more nouns before the verbal noun is the line. Table cells and product terms are exempt.
+‘우리’는 화자로 판단한다. ‘이 버그는 우리가 만들었다’는 책임을 드러내므로 살린다. 작성자와 독자를 혼동하게 하는 ‘우리 시스템’은 원문에서 확인되는 시스템 이름으로 고친다. ‘많은 사용자들’의 ‘들’은 줄일 수 있지만 복수형 자체가 오류는 아니다.
 
-**명사구 종결.** Ending sentences with ~것이다, ~라는 점이다, ~하는 일이다, ~인 경우다. This is where Korean prose goes flabby. "이 오류가 나는 것은 캐시가 비어 있는 경우다" becomes "캐시가 비어 있으면 이 오류가 난다."
+‘가격이 5만 원이십니다’처럼 사물을 높이는 문장을 고친다. ‘확인이 필요하십니다’는 문맥에 따라 ‘확인이 필요합니다’로 쓸 수 있다. 사람을 높이는 표현과 필요한 정중함은 유지한다. 정중한 요청을 명령으로 강화하지 않는다.
 
-**~적, ~성, ~화 남발.** 효율적, 전략적, 확장성, 고도화, 최적화, 활성화. Each one is fine alone; stacked they say nothing, and a bulleted grid of `**확장성**: ...` labels is the same slop in list form. Keep any that is a real term in the field. Otherwise say what changed, and ask for the number if the draft lacks one.
+## 문단 흐름과 반복 수사
 
-**불필요한 대명사와 복수형.** Korean drops subjects that context supplies. Cut 그것은, 이것은, 우리는 when they carry nothing, and cut ~들 when the plural is obvious ("많은 사용자들" becomes "많은 사용자"). Keep the pronoun when it carries meaning: contrast, or the writer implicating themselves ("이 버그는 우리가 만들었다"). This rule is about empty subjects, not about stripping objects.
+- **빈 도입과 과장된 훅:** ‘바야흐로 ~의 시대’, ‘아무도 알려주지 않는’, ‘결론부터 말하자면’이 본론을 늦추기만 하면 뺀다. 상황 설명이 필요한 독자에게는 배경을 남긴다. 모든 글을 ‘새벽 두 시, 알람이 울렸다’ 같은 장면으로 시작하지 않는다.
+- **이분 대조:** ‘단순한 X를 넘어 Y’, ‘X가 아닙니다. Y입니다’가 같은 주장을 반복하면 특징을 직접 쓴다. ‘요청 수가 아니라 세션 수를 센다’처럼 오해를 바로잡는 부정은 남긴다.
+- **연결어:** ‘또한’, ‘한편’, ‘따라서’를 문장마다 붙이지 않는다. 실제 원인·대조·순서를 드러내는 연결어는 보존한다. 전환 문장을 지운 뒤 문단이 갑자기 다른 이야기로 넘어가지는 않는지 읽는다.
+- **의미 부풀리기:** ‘시사하는 바가 큽니다’, ‘중요한 이정표입니다’, ‘방증합니다’가 근거를 대신하면 줄인다. 실제 판단과 그 이유는 남긴다.
+- **출처 없는 인용:** ‘전문가들은’, ‘연구에 따르면’의 출처가 없으면 짧게 표시하거나 확인을 요청한다. 인용 틀만 지워 미확인 주장을 사실처럼 만들지 않는다.
+- **상투 비유:** ‘자리’, ‘갈래’, ‘문턱’, ‘층위’, ‘묶다’가 반복되거나 뜻을 흐리면 구체적인 관계나 행동으로 고친다. 자연스러운 비유와 기술어까지 금지하지 않는다. ‘SDK에 묶인다’는 문맥에 따라 ‘SDK에 종속된다’로 쓸 수 있지만 모든 ‘묶다’를 같은 말로 바꾸지 않는다.
+- **마무리:** ‘지금까지 살펴보았습니다’만 반복하는 결말이나 갑작스러운 홍보 문구는 덜어낸다. 긴 글의 판단 정리, 다음 행동, 필자다운 구체적 마지막 문장은 남긴다.
 
-**한국어 이분 대조.** Only the rhetorical form: a negation split across two sentences ("X가 아닙니다. Y입니다."), a hype opener ("중요한 건 X가 아니라 Y입니다"), an escalation ("단순한 X를 넘어 Y입니다"), or a negative list ("기술의 문제가 아닙니다. 예산의 문제도 아닙니다. 사람의 문제입니다"). State Y directly. Keep "A가 아니라 B" when the negated half does work: correcting a wrong assumption the reader already holds ("이 지표는 요청 수가 아니라 세션 수를 센다"), or warning that a name misleads ("이 오류는 파일이 없다는 뜻이 아니다"). Ordinary Korean coordination is not a tic. Do not delete 아니라 on sight.
+기술문서와 보고서에도 빈 수사와 모호한 표현은 생긴다. 장르만 보고 점검을 통째로 끄지 않는다. 비교를 위한 반복 구조, 절차 번호, 명사형 표 항목은 읽는 데 도움이 되면 유지한다.
 
-**한국어 서두 뜸들이기.** "결론부터 말하자면", "솔직히 말해서", "한 가지 분명히 하자면", "여기서 중요한 점은". Cut and state the point.
+## 부호와 서식
 
-**과장된 훅과 강박 열거.** "아무도 알려주지 않는", "당신이 몰랐던 ~가지", "~의 모든 것", "이것만 알면 끝", "지금 바로 확인하세요", "~하는 사람들의 공통점", "핵심 포인트 3가지", "반드시 알아야 할 다섯 가지". Cut the setup and make the claim stand alone.
+한국어 문장 중간의 대시가 흐름을 자주 끊으면 쉼표·괄호·마침표로 정리한다. 콜론, 가운뎃점, 슬래시도 실제 관계나 기능을 나타내면 쓸 수 있다. 시간, URL, 코드 표기는 보존한다. 부호 수로 자연스러움을 판정하지 않는다.
 
-**콜론 드러내기.** "핵심은 하나입니다: 맥락이 전부입니다." Write it as a plain sentence. Colons used for an actual list, label, heading, or metadata line are fine.
+범위 표기와 강조는 대상 형식에서 읽히는지 확인한다. 물결표를 쓰면 무조건 취소선이 된다고 가정하지 않는다. 같은 수준의 목록은 비교하기 쉽게 정리하되 모든 항목의 길이를 억지로 맞추지 않는다. 긴 표 설명은 본문으로 옮길 수 있다. 노션이라는 이유만으로 문장마다 줄을 나누거나 굵게 만들지 않는다.
 
-**한국어 의미 부풀리기.** "~에 큰 의미를 갖습니다", "~의 중요한 이정표입니다", "시사하는 바가 큽니다", "~을 보여주는 대목입니다", "~임을 방증합니다". State the fact and let the reader judge.
+## 요청과 일정이 있는 글
 
-**출처 없는 인용.** "전문가들은 ~라고 말합니다", "업계에서는 ~로 알려져 있습니다", "~라는 분석이 나옵니다", "연구에 따르면". Name the source or cut the claim. Ask the writer; do not invent one.
+‘확인이 필요해서 확인을 요청한다’는 설명을 반복하지 않는다. 원문에 후속 작업이 있다면 ‘검토가 끝나야 시안을 확정할 수 있다’처럼 그 이유를 쓴다. 검토 마감, 다른 팀에 전달하는 시각, 늦어질 때 미리 알릴 시각은 각각 누구의 행동인지 구분한다. 시간이 여럿이면 짧은 목록이나 문장으로 나눌 수 있다. ‘오후 3시 검토 마감’을 ‘오후 3시 전달’로 읽게 만들지 않았는지 다시 확인한다.
 
-**설의법과 자문자답.** "왜일까요?", "한번 생각해 봅시다", "정답은 무엇일까요?" followed by the writer's own answer. Drop the question and make the point.
+## 답변을 모아 만든 문서
 
-**단조로운 리듬.** Sentences that all run the same length and shape, a section where every paragraph opens with a bold claim, or 3연속 대구 ("빠르고, 정확하고, 안정적입니다"). Vary length and structure. Do not vary the speech level to do it: a 해라체 draft ends every declarative in ~다 by grammar, and that is not slop. Never mix ~죠 or ~고요 into a 합니다체 or 해라체 draft.
+독립된 문서로 다듬어 달라는 요청이라면 ‘네, 맞습니다’, ‘말씀하신 대로’ 같은 대화 흔적을 걷어내고 흩어진 중복을 모은다. 실제 FAQ의 질문 제목과 독자의 질문은 유지한다.
 
-**상투적 마무리.** "결국 중요한 것은 사람입니다", "미래는 이미 우리 곁에 있습니다", "이제 선택은 여러분의 몫입니다", "앞으로가 더 기대됩니다". Delete the closing aphorism and end on the last concrete point or next step. A wry, concrete last line in the writer's own voice ("이번엔 운이 좋았다") is not an aphorism. Keep it.
+‘미정’, ‘추후 결정’은 상태 정보다. 보기 좋게 만들려고 삭제하거나 결정된 것처럼 바꾸지 않는다. 필요하면 결정 대기 항목을 모으되 각 항목의 조건과 맥락을 보존한다.
 
-**요약 반복 마무리.** "지금까지 ~에 대해 살펴보았습니다", "정리하자면 다음과 같습니다" followed by a restatement. The reader was just there. Cut it.
+## 문단 편집 예시
 
-**형식 슬롭.** Emoji in headings and trailing emoji in body lines, decorative 볼드, bold on so many paragraph openers that none of them emphasizes anything, 느낌표와 물결표 남발 ("정말 놀라운 결과입니다!!", "안녕하세요~"), bullet lists where two sentences would read better, and em dashes copied from English. Korean prose rarely needs an em dash; use a comma, a period, or 괄호. 가운뎃점(·) joining coordinate nouns is standard Korean orthography, not slop.
+원문:
 
-**존대 혼용.** Mixed 합니다체 and 해요체 in the writer's own sentences, or 반말 dropped into a formal draft. Pick the writer's level and hold it. Quoted text keeps its own level.
+> 이 기능은 업로드 전에 열 이름을 검사합니다. 누락된 열을 알려줍니다. 또한 이 기능은 데이터 검증의 새로운 지평을 여는 혁신적인 도구입니다. 사용자는 파일을 올리기 전에 열 이름을 고칠 수 있습니다.
 
-## Eval cases
+교정 예:
 
-Run these after editing a Korean draft, in addition to the checks in `eval.md`.
+> 이 기능은 업로드 전에 열 이름을 검사하고 누락된 열을 알려줍니다. 사용자는 안내를 보고 열 이름을 고친 뒤 파일을 올릴 수 있습니다.
 
-1. 기술문서·명세·보고서라면 이분 대조, 훅, 콜론, 리듬, 형식, 상투적 마무리 여섯 가지만 껐는가? 나머지 규칙은 그대로 적용했는가?
-2. 인용문, 코드, UI 문구, 에러 메시지를 그대로 두었는가?
-3. 제품·코드 용어를 명사 나열이나 ~화 슬롭으로 오인해 풀어헤치지 않았는가?
-4. 원문에 없던 숫자, 행위자, 출처를 지어내지 않았는가? 빠진 정보는 글쓴이에게 물었는가?
-5. 번역투(~에 대한, ~을 통해, ~에 있어서, ~에 기반하여)와 ~의 남발이 한국어 문장으로 바뀌었는가?
-6. 사물존칭과 과잉 존대가 사라졌는가?
-7. 이중 피동이 사라졌고, 남은 피동은 행위자가 드러나거나 행위자가 중요하지 않은 경우인가?
-8. 습관적인 완충 어미가 실제 불확실성이나 미결 사항을 나타낼 때만 남았는가?
-9. "A가 아니라 B" 중 독자의 오해를 바로잡는 문장은 그대로 살아 있는가? 뜻을 지닌 주어(우리가, 내가)를 지우지 않았는가?
-10. 종결어미를 바꾸느라 존댓말 수준이 섞이지 않았는가?
-11. 요약 반복 마무리를 잘라냈는가? 설득문이라면 마지막 문장이 잠언이 아니라 구체적인 내용, 결론, 다음 행동으로 끝나는가?
+이미 있는 동작과 사용자 행동을 연결하고 과장만 줄였다. 검사 속도, 오류 방지율, 담당자는 추가하지 않았다.

@@ -1,0 +1,126 @@
+{
+  "model": "gpt-6-luna",
+  "persona": "처음 읽는 독자이자 보통의 타팀 동료. 흔한 단어와 자연스러운 설명을 선호하며, 읽은 뒤 내용을 정확히 다시 말하거나 행동할 수 있는지를 중시한다. 기술 내용은 지정된 주니어 엔지니어 독자 수준으로 읽는다.",
+  "cases": [
+    {
+      "id": "ko-technical",
+      "scores": {"plain_words": 8, "flow": 9, "clarity": 10, "no_slop": 10, "genre_fit": 9},
+      "total": 92,
+      "verdict": "ready",
+      "strongest_feature": {"quote": "2초나 6초가 지나도 실행기 두 개가 모두 바쁘면 더 기다려야 합니다.", "reason": "재시도 지연과 실제 전송 가능 시점을 구분해 핵심 오해를 막는다."},
+      "issues": [],
+      "answers": [
+        "응답 없이 30초가 지나거나 HTTP 503일 때 재시도한다. 최초 전송을 포함해 총 3회가 최대이고, 첫 실패 뒤 2초, 둘째 실패 뒤 6초를 기다린다. 시간이 됐어도 실행기 둘이 모두 사용 중이면 바로 전송되지 않는다.",
+        "새로 고침 뒤에는 대기열이 복구되지 않고 같은 파일을 다시 등록하면 새 키가 생기므로, 이전 저장과의 중복 방지는 보장되지 않는다. 취소는 자동 재시도를 막지만 이미 서버에 저장된 파일을 삭제하지 않는다."
+      ]
+    },
+    {
+      "id": "ko-professional",
+      "scores": {"plain_words": 8, "flow": 9, "clarity": 10, "no_slop": 10, "genre_fit": 10},
+      "total": 94,
+      "verdict": "ready",
+      "strongest_feature": {"quote": "이번 시험에서 B의 파손이 한 개 더 나왔지만, 실제 배송에서도 파손이 두 배라고 결론 내릴 수는 없습니다.", "reason": "수치와 그 수치로 말할 수 없는 범위를 바로 연결해 제품 리더가 과장된 결론을 내리지 않게 한다."},
+      "issues": [],
+      "answers": [
+        "아니다. 24개씩의 제한된 내부 낙하 시험에서 관찰된 비율일 뿐이다. 표본을 무작위로 넓게 뽑지 않았고 실제 배송도 아니어서 실제 배송 파손률이 두 배라고 판단할 수 없다.",
+        "아니다. 고객 배송에는 A를 계속 쓰며 B는 승인되지 않았다. 다음 시험은 품질팀이 9월 23일까지 시험안을 제출하고, 제품기획팀이 9월 25일까지 추가 자재비를 결정해야 한다. 승인 뒤 일정을 잡으므로 완료일은 아직 정해지지 않았다."
+      ]
+    },
+    {
+      "id": "ko-general",
+      "scores": {"plain_words": 9, "flow": 10, "clarity": 9, "no_slop": 10, "genre_fit": 10},
+      "total": 96,
+      "verdict": "ready",
+      "strongest_feature": {"quote": "음식 종류보다 꺼내 쓰는 시간에 맞춰 자리를 정했다.", "reason": "정리 원칙을 생활 장면과 연결해 쉽게 이해하고 기억할 수 있다."},
+      "issues": [],
+      "answers": [
+        "찬장을 전부 비우는 대신 두 칸만 정리했고, 음식 종류별이 아니라 아침거리와 빨리 끓여 먹는 것처럼 쓰는 시간에 맞춰 자리를 나눴다. 열린 봉지는 낮은 바구니에 넣고 새것은 뒤에 뒀다. 다른 사람 물건은 혼자 버리지 않고 함께 확인했다.",
+        "아니다. 지난 세 번 국수를 중복 구매하지 않은 것은 정리의 효과일 수도 있지만 국수를 덜 먹은 탓일 수도 있다고 글쓴이가 밝힌다. 경험이 짧아 효과를 확정하지 않는다."
+      ]
+    },
+    {
+      "id": "ko-business",
+      "scores": {"plain_words": 8, "flow": 9, "clarity": 10, "no_slop": 10, "genre_fit": 10},
+      "total": 94,
+      "verdict": "ready",
+      "strongest_feature": {"quote": "고객경험팀이 요청을 접수하더라도 최종 문구 승인은 제품기획팀, 배포는 웹개발팀이 계속 맡습니다.", "reason": "인계 후에도 남는 역할 경계를 첫 부분에서 분명히 한다."},
+      "issues": [],
+      "answers": [
+        "전환 전 요청은 이서진(제품운영)이 완료까지 맡고, 전환 시점부터 온 요청은 박민서(고객경험)가 맡는다. 접수는 고객경험, 최종 승인은 제품기획 정하린, 배포는 웹개발 오준호 책임이다.",
+        "준비 항목 하나라도 미완료이거나 연습에 불참자가 있으면 연습 완료로 인정하지 않는다. 전환 결정에서 미완료가 있으면 전환을 미루고 제품운영팀이 기존 접수를 계속 맡으며 새 날짜를 협의한다. 11월 6일은 남은 요청을 함께 확인하는 날이지, 기존 요청을 강제로 끝내는 날이 아니다."
+      ]
+    },
+    {
+      "id": "ko-slack",
+      "scores": {"plain_words": 9, "flow": 9, "clarity": 10, "no_slop": 9, "genre_fit": 10},
+      "total": 94,
+      "verdict": "ready",
+      "strongest_feature": {"quote": "각 행의 ‘확인 결과’ 칸에 ‘사용 가능’ 또는 수정 의견을", "reason": "대상, 입력 위치, 허용되는 답 형식을 한 문장에 구체적으로 담았다."},
+      "issues": [],
+      "answers": [
+        "민서가 공유 문서의 알림 문구 6개를 검토하고 각 행의 ‘확인 결과’ 칸에 ‘사용 가능’ 또는 수정 의견을 2026년 10월 9일 금요일 오후 3시 KST까지 남긴다.",
+        "기한이 어렵다면 같은 날 정오 KST까지 가능한 완료 시간을 알려야 한다. 그러면 요청자가 디자인팀에 기존 문구로 임시 시안을 만들어 달라고 요청한다. 오후 3시 전달을 거쳐야 다음 주 안내 화면 시안을 확정할 수 있다."
+      ]
+    },
+    {
+      "id": "en-technical",
+      "scores": {"plain_words": 8, "flow": 9, "clarity": 10, "no_slop": 10, "genre_fit": 10},
+      "total": 94,
+      "verdict": "ready",
+      "strongest_feature": {"quote": "A generation exactly 20 minutes old is still eligible to serve results. At 20 minutes and one second, it is too old.", "reason": "The boundary is stated with exact inclusive and exclusive cases, leaving little room for operational misreading."},
+      "issues": [],
+      "answers": [
+        "Yes. Exactly 20 minutes is eligible; at 20 minutes and one second it is too old. An empty list is still a valid result, and the client must not retry against another generation.",
+        "No. Age is based on snapshot_at, so a successful slow build does not reset it. If the count check fails, the worker keeps the active generation and records a failed refresh; the pointer does not switch."
+      ]
+    },
+    {
+      "id": "en-professional",
+      "scores": {"plain_words": 9, "flow": 9, "clarity": 10, "no_slop": 10, "genre_fit": 10},
+      "total": 96,
+      "verdict": "ready",
+      "strongest_feature": {"quote": "A correct click alone does not answer both questions.", "reason": "It clearly distinguishes completing the task from understanding what the action does."},
+      "issues": [],
+      "answers": [
+        "Use “Save for later” for saving an unfinished request in the next Cedar prototype; keep “Submit request” for sending it to an approver. A correct click does not prove understanding: one participant clicked correctly but still thought a manager would be alerted.",
+        "Check whether people think the saved request will submit automatically, with eight new participants, before the 6 October 2026 release review. The sessions were in English on desktop; translated labels, mobile layouts, screen-reader users, and real shift-deadline pressure were not tested."
+      ]
+    },
+    {
+      "id": "en-general",
+      "scores": {"plain_words": 9, "flow": 10, "clarity": 9, "no_slop": 10, "genre_fit": 10},
+      "total": 96,
+      "verdict": "ready",
+      "strongest_feature": {"quote": "It was an object with a history, and a slightly inconvenient battery, rather than a test of my character.", "reason": "The personal detail explains the writer’s hesitation and the change in feeling without turning the article into generic advice."},
+      "issues": [],
+      "answers": [
+        "The writer worried that a neighbour might judge a scratched drill or think they kept it too long. Ruth showed the notebook with name, flat, tool, and return day, and the drill’s existing scratches and battery note made borrowing feel ordinary and approachable.",
+        "Loans last at most three days unless a longer loan is arranged with the owner. After fixing the shelf, the writer cleaned the drill case, returned it Sunday, and crossed out the notebook entry."
+      ]
+    },
+    {
+      "id": "en-business",
+      "scores": {"plain_words": 9, "flow": 10, "clarity": 10, "no_slop": 10, "genre_fit": 10},
+      "total": 98,
+      "verdict": "ready",
+      "strongest_feature": {"quote": "that review will not automatically transfer ownership.", "reason": "It directly resolves a likely handover ambiguity and makes the consequence of open readiness dependencies explicit."},
+      "issues": [],
+      "answers": [
+        "If IT access or Finance’s billing contact is still open at 16:00 UTC on 16 October, Arun marks the handover Not ready and Launch continues handling customer requests. The 19 October readiness review does not itself transfer ownership.",
+        "Before Launch’s temporary defect responsibility ends, every remaining defect needs a named engineering owner and next update date. During investigation, Support keeps communicating with the customer; afterward Arun owns the ongoing support queue."
+      ]
+    },
+    {
+      "id": "en-slack",
+      "scores": {"plain_words": 9, "flow": 9, "clarity": 10, "no_slop": 9, "genre_fit": 10},
+      "total": 94,
+      "verdict": "ready",
+      "strongest_feature": {"quote": "Without approval by then, I'll use \"Sample account A\", \"Sample account B\", and \"Sample account C\" in both materials.", "reason": "The fallback action and its exact trigger are explicit, so the recipient can see what happens if the deadline passes."},
+      "issues": [],
+      "answers": [
+        "Priya must check the three account names in demo-accounts-v2 and reply in the thread with “Approved” or corrections by 15:00 UTC on 8 October 2026. The names must be settled before Leo records the walkthrough at 16:00 so the recording and slides match.",
+        "If Priya cannot finish, she should say so in the thread by 15:00 UTC. If approval is still missing then, the sender will use Sample account A, B, and C in both materials. The sender updates the slides; Priya owns the naming check."
+      ]
+    }
+  ]
+}

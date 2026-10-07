@@ -1,0 +1,30 @@
+[
+  {
+    "id": "en-holdout",
+    "genre": "mixed technical explanation and Slack request",
+    "audience": "Nonengineer colleagues preparing a training session",
+    "editing_request": "Edit for clarity, natural wording, and suitable pacing while preserving meaning, voice, uncertainty, and concrete details. The facts list is explicitly non-exhaustive; preserve all meaningful information in the source, not only listed facts. Do not invent facts. Keep the message suitable for a team thread and preserve the distinctions among roles. This source is held out from the first evaluation.",
+    "facts": [
+      "Marlin separates report visibility from row-download permissions.",
+      "A Viewer can open reports and change on-screen filters. An Analyst can also export CSV only if the workspace owner enabled exports.",
+      "An Owner can enable exports but does not automatically have Analyst permission.",
+      "Filtered exports allow at most 5,000 rows, including exactly 5,000. At 5,001 or more the whole download is blocked with the specified message; rows are never silently truncated.",
+      "A partial file might incorrectly appear complete for a monthly total.",
+      "Leah must confirm in MARLIN-18 by 11:00 UTC on 12 October 2026 that training-workspace exports are enabled and both trainers have Analyst permission.",
+      "If either condition is missing at the deadline, the sender uses a prepared example CSV and records the access issue for follow-up; training can still proceed."
+    ],
+    "protected_spans": [
+      "Marlin",
+      "Viewer",
+      "Analyst",
+      "Owner",
+      "CSV",
+      "5,000",
+      "5,001",
+      "Narrow your filters to export 5,000 rows or fewer.",
+      "Leah",
+      "MARLIN-18",
+      "11:00 UTC on 12 October 2026"
+    ]
+  }
+]

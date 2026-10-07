@@ -1,0 +1,102 @@
+[
+  {
+    "id": "ko-technical",
+    "genre": "technical explanation",
+    "audience": "주니어 엔지니어",
+    "file": "texts/ko-technical.md",
+    "questions": [
+      "자동 재시도의 조건과 최대 횟수는 무엇이며, 2초나 6초가 지나면 바로 전송되는가?",
+      "브라우저 새로 고침 뒤 같은 파일을 다시 등록해도 중복 저장이 방지되는가? 취소하면 서버 파일도 삭제되는가?"
+    ]
+  },
+  {
+    "id": "ko-professional",
+    "genre": "professional report",
+    "audience": "비전문 제품 리더",
+    "file": "texts/ko-professional.md",
+    "questions": [
+      "B의 파손 비율이 A의 두 배였으므로 실제 배송도 두 배 파손된다고 판단할 수 있는가?",
+      "B를 고객 배송에 지금 써도 되는가? 다음 시험의 결정·담당·기한과 완료일 상태는 무엇인가?"
+    ]
+  },
+  {
+    "id": "ko-general",
+    "genre": "general personal article",
+    "audience": "함께 사는 집을 정리하는 일반 독자",
+    "file": "texts/ko-general.md",
+    "questions": [
+      "찬장 배치와 상대 물건을 버리는 방법을 어떻게 바꾸었는가?",
+      "국수를 중복 구매하지 않은 경험으로 정리 방법의 효과를 확정할 수 있는가?"
+    ]
+  },
+  {
+    "id": "ko-business",
+    "genre": "business handover plan",
+    "audience": "제품운영·고객경험·제품기획·웹개발 담당자",
+    "file": "texts/ko-business.md",
+    "questions": [
+      "전환 전후 요청은 누가 맡으며, 접수·승인·배포는 각각 누구 책임인가?",
+      "준비가 미완료이거나 연습에 불참자가 생기면 어떻게 되는가? 11월 6일에 기존 요청이 강제로 끝나는가?"
+    ]
+  },
+  {
+    "id": "ko-slack",
+    "genre": "Slack request",
+    "audience": "문구 검토 동료 민서",
+    "file": "texts/ko-slack.md",
+    "questions": [
+      "누가 어디에 어떤 결과를 언제까지 남겨야 하는가?",
+      "기한을 지키기 어렵다면 언제 무엇을 알려야 하며, 누가 어떤 대안을 진행하는가?"
+    ]
+  },
+  {
+    "id": "en-technical",
+    "genre": "technical explanation",
+    "audience": "Junior engineers maintaining a fictional search refresh worker",
+    "file": "texts/en-technical.md",
+    "questions": [
+      "Can a generation exactly 20 minutes old serve results, and what happens at 20 minutes plus one second or when valid results are empty?",
+      "Does a slow successful build reset age? What happens to the active pointer when the count check fails?"
+    ]
+  },
+  {
+    "id": "en-professional",
+    "genre": "professional usability study report",
+    "audience": "Non-specialist product leads deciding which label to test next",
+    "file": "texts/en-professional.md",
+    "questions": [
+      "What wording is recommended, for which stage, and does a correct button click prove that people understood it?",
+      "What remaining misunderstanding must be checked, with whom and by when, and which broader groups or conditions were not tested?"
+    ]
+  },
+  {
+    "id": "en-general",
+    "genre": "everyday personal article",
+    "audience": "General readers interested in neighbourhood life",
+    "file": "texts/en-general.md",
+    "questions": [
+      "Why did the writer hesitate to borrow, and what made borrowing easier?",
+      "What is the loan-duration rule and its exception? What did the writer do after fixing the shelf?"
+    ]
+  },
+  {
+    "id": "en-business",
+    "genre": "cross-team handover plan",
+    "audience": "Launch, Support, IT, Finance, and Sales teams running a fictional pilot",
+    "file": "texts/en-business.md",
+    "questions": [
+      "Who handles requests if the readiness dependencies remain open, and does the October 19 review automatically transfer ownership?",
+      "What is required before Launch can end responsibility for remaining defects, and who keeps communicating with customers during investigation?"
+    ]
+  },
+  {
+    "id": "en-slack",
+    "genre": "polite Slack request",
+    "audience": "Priya, who owns the customer naming check for a demo",
+    "file": "texts/en-slack.md",
+    "questions": [
+      "Who needs to do what, where, and by what exact deadline? Why is that deadline needed?",
+      "If approval is missing or Priya cannot finish, who does what next and when?"
+    ]
+  }
+]

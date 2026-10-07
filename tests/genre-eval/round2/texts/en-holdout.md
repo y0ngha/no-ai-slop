@@ -1,0 +1,9 @@
+Hi team — following the questions about the Marlin export screen, here's how the permissions work. Viewing a report and downloading its rows require separate permissions:
+
+- A Viewer can open the report and change its on-screen filters.
+- An Analyst can do those things and export a CSV, but only when the workspace owner has enabled exports.
+- An Owner can enable exports. Being an Owner does not itself grant the Analyst permission.
+
+One export can contain at most 5,000 rows after filters are applied. Exactly 5,000 rows is allowed. If the filtered report contains 5,001 or more, the download is blocked with "Narrow your filters to export 5,000 rows or fewer." The system does not quietly download the first 5,000 rows: a partial file could look complete to someone using it for a monthly total.
+
+Leah, please confirm in `MARLIN-18` by 11:00 UTC on 12 October 2026 whether the training workspace has exports enabled and whether both trainers have Analyst permission. We need both to prepare the download exercise. If either condition is missing at that deadline, I'll use the prepared example CSV for training and record the access issue for follow-up. We can still run the session with that fallback.

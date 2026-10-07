@@ -1,0 +1,51 @@
+{
+  "model": "gpt-5.6-terra",
+  "persona": "바쁜 운영 책임자·의사결정자(한영 이중언어)",
+  "documents": {
+    "ko": {
+      "scores": {
+        "comprehension": {"score": 9, "reason": "기간·대상·예외와 각 수치의 한계를 함께 밝혀, 운영 의사결정에 필요한 사실과 미확정 사항을 빠르게 분리할 수 있다.", "evidence": "줄어든 0.7시간을 오전 집중 시간의 효과로 해석할 수는 없습니다."},
+        "flow": {"score": 9, "reason": "목적, 규칙의 실제 해석, 기록, 비용, 선택지 순서가 결정을 위해 자연스럽다. 개인 경험은 권고 직전에 배치되어 편향을 스스로 점검하게 한다.", "evidence": "제 경험과 남은 선택"},
+        "wording": {"score": 9, "reason": "‘조용한 달력과 조용한 일’처럼 추상적 효과를 업무 장면으로 풀고, ‘증거’와 ‘단정’을 구분하는 표현이 정확하다.", "evidence": "조용한 달력과 조용한 일은 다른데"},
+        "voice": {"score": 10, "reason": "회고의 개인적 목소리와 책임 있는 운영 문체가 끝까지 일관된다. 자신의 이득과 제안의 책임을 숨기지 않는다.", "evidence": "제가 얻은 이득을 팀의 이득이라고 부르고 있지는 않은지"},
+        "usefulness": {"score": 10, "reason": "17/5의 관찰 범위, 두 대안, 권고안의 선행 조건과 불충족 시 행동이 명료해 다음 회의 안건으로 바로 쓸 수 있다.", "evidence": "아직 두 조건 모두 확인하지 않았습니다."}
+      },
+      "total": 94,
+      "comprehension_answers": {
+        "K1": "8월 17일부터 9월 25일까지 6주간 9명(기획 2, 개발 4, 디자인 1, 운영 2)을 대상으로 월~목 오전 9시~12시에 정기 회의를 잡지 않았다. 금요일과 타 팀 주관 회의는 제외했고, 장애 대응·당일 배포 확인·고객이 시간을 정한 통화 및 사전 동의한 짧은 대화는 예외였다.",
+        "K2": "1인당 주간 내부 회의가 5.8시간에서 5.1시간으로 줄었고, 마지막 설문 응답자 8명 중 6명은 이어서 일할 시간이 늘었다고 했다. 그러나 비교 기간의 월간 보고 회의 부재와 운영 담당자 휴가, 달력 밖 대화가 있어 0.7시간을 제도 효과로 볼 수 없다. 동일한 8명이 매주 답했는지도 몰라 설문을 개인별 변화로 연결할 수 없다.",
+        "K3": "운영은 문의를 점심 이후 개발자에게 물어야 했고, 고객 설명이 필요한 비장애 문의가 경계에 걸렸다. 별도 기록 17건 중 5건은 오후까지 답을 기다려 고객에게 재연락해야 했다. 이는 이번 규칙 아래의 대기 부담을 보여 주지만, 과거에도 같은 일이 있었을 수 있어 부담이 증가했다고 입증하지는 못한다.",
+        "K4": "첫째는 현 규칙을 4주 더 유지하며 매일 오전 11시 40분 운영 질문 확인 담당 1명을 두는 안, 둘째는 화·목만 오전 회의를 허용하고 나머지 이틀을 보호하는 안이다. 저자는 첫째를 선호한다. 운영 2명이 그것이 대기 부담을 줄인다고 판단하고, 개발 파트가 순번 운영 가능하다고 답해야 하며 업무가 특정인에게 고정되지 않아야 진행할 수 있다.",
+        "K5": "결정은 아직 나지 않았다. 작성자는 두 번째 주 수요일에 방해 없이 오래된 가입 흐름 메모를 끝낸 경험 때문에 유지 쪽으로 기울지만, 그 개인적 이득을 팀 전체 이득으로 일반화할 위험을 직접 인정한다. 또한 기획 결정 지연이 개발자의 오후 재작업을 낳을 수 있음을 든다."
+      },
+      "strongest_feature": "숫자를 성과 주장에 동원하지 않고, 어떤 비교가 가능한지와 불가능한지를 같은 문단에서 밝혀 운영상 공정한 판단을 돕는다.",
+      "friction": [
+        {"quote": "운영 담당자 2명이 질문 확인 방식으로 대기 부담을 줄일 수 있다고 판단하고", "impact": "누가 어떤 기준이나 시점에 ‘판단’하는지 없어 10월 실행 결정을 맡은 사람이 확인 절차를 정해야 한다.", "suggested_direction": "다음 회고 또는 제안 시 확인 주체·시점과 최소 확인 질문을 한 문장으로 적는다."}
+      ],
+      "ready_to_share": "공유 가능하다. 읽기와 판단 재료는 충분하며, 권고도 조건부라는 점이 선명하다. 다만 제도 채택 결정은 아직 운영 2명의 판단과 개발 파트의 순번 가능 여부를 확인한 뒤에만 정당화된다."
+    },
+    "en": {
+      "scores": {
+        "comprehension": {"score": 9, "reason": "범위, 권한, 시간 배분, 비용, 보류 조건이 한 문서 안에서 선명해 운영자가 무엇을 승인하는지 이해하기 쉽다.", "evidence": "The calendar would allocate time, not permission to operate a machine."},
+        "flow": {"score": 10, "reason": "권고에서 승인 조건을 먼저 제시하고 현황·설계·이해관계·예외·평가·미착수 요건으로 전개한다. 각 정보가 결정 시점에 필요한 자리에서 나온다.", "evidence": "What remains before we start"},
+        "wording": {"score": 9, "reason": "예약과 안전 승인의 차이, 관찰 건수와 사람 수의 차이를 짧고 구체적으로 설명한다. 다만 ‘ordinary session’의 시험 기준은 약간 열려 있다.", "evidence": "These were observed occasions, not 19 distinct people."},
+        "voice": {"score": 9, "reason": "책임 있는 제안자의 실무적 어조가 일관되고, 확신·접근성·자발성을 함께 인정한다. 비유도 과하지 않고 논지를 보강한다.", "evidence": "a tidier calendar can still make a worse afternoon"},
+        "usefulness": {"score": 10, "reason": "승인 한도와 담당 시간, 시작·연기 기준, 담당자 공백, 4주·8주 평가가 명시되어 운영 그룹의 결정을 행동으로 옮길 수 있다.", "evidence": "If we cannot identify those hours before October 20, we should delay the start."}
+      },
+      "total": 94,
+      "comprehension_answers": {
+        "E1": "대상은 table saw, laser cutter, large sewing machine이며, Tuesday/Thursday evening과 Saturday afternoon의 staffed member sessions에서 8주간 시행한다. Classes, open repair mornings, pottery room은 기존 방식을 유지하며 class participants는 사용 회원 수 집계에서도 제외된다.",
+        "E2": "가용 시간 절반은 7일 전부터 setup과 clearing을 포함한 45분 단위로 예약하고, 절반은 당일 도착 이용자에게 남긴다. 회원은 기계별 주 1회 사전 예약만 가능하다. 예약자는 10분 뒤에도 없고 duty volunteer가 물품을 가지러 간 것이 아님을 확인하면 자리가 풀린다. 예약은 운전 허가가 아니며 기존 induction과 duty volunteer의 확인이 여전히 필요하다.",
+        "E3": "9월 12개 staffed session에서 세 기계에 30분 넘게 기다린 관찰이 19번 있었고, 그중 4번은 사용 전 떠났다. 이는 현 대기 마찰의 근거지만 19명이었다는 뜻은 아니며, 기계 유휴 시간을 기록하지 않아 사전 예약이 유용한 작업량을 늘릴지 말해 주지 못한다.",
+        "E4": "시작 전 coordinator coverage, tutors의 class overrun 동의, 보통 세션 한 번에서 시험한 paper booking process가 준비되어야 한다. Rafi는 calendar setup만 제안했고 장기 운영 약속은 하지 않았다. Nora는 첫 2주를 맡지만 나머지 6주의 named person이 필요하다. $180과 주당 coordinator 2시간도 필요하며 10월 20일까지 시간을 특정하지 못하면 연기한다. ‘ordinary session’의 구체적 선정자·합격 기준은 명시되지 않았고, laser cutter를 공유하는 두 tutor도 상세 규칙을 아직 검토하지 않았다.",
+        "E5": "4주 차에는 관리 시간이 주 2시간 안인지와 arrival-day users가 반복적으로 거절되는지를 점검한다. 8주 차에는 steering group이 지속·예약 가능 시간 비율 변경·중단을 결정한다. 30분 초과 대기, missed bookings, overruns, 행정 시간, 그리고 이용자가 원한 작업을 마쳤는지의 의견을 함께 본다. 대기가 줄어도 가끔 오는 회원을 위축시킨 결과라면 성공이라고 볼 수 없다."
+      },
+      "strongest_feature": "대기 감소라는 단일 지표를 접근성·자발성·운영 부담과 연결해, 효율 향상이 곧 성공이라는 성급한 결론을 막는다.",
+      "friction": [
+        {"quote": "a tested paper booking process", "impact": "시작 조건이지만 시험 책임자, ‘tested’의 통과 기준, 이용자 안내 방식이 정해지지 않아 10월 20일 준비 완료 판정이 흔들릴 수 있다.", "suggested_direction": "한 세션의 시험 담당자와 확인 항목(전화·대면 입력, printed sheet 갱신 등)을 최소한으로 적는다."},
+        {"quote": "The coordinator could arrange a double block", "impact": "접근성 조정의 판단·예약 절차가 coordinator 개인 재량으로 남아 일관성과 개인정보 보호의 실제 운영 방식이 불명확하다.", "suggested_direction": "비공개 요청 경로와 결정 기록의 최소 원칙을 정한다."}
+      ],
+      "ready_to_share": "공유 및 조건부 승인 논의에 적합하다. 문서는 관찰과 결론을 구분하고 이해관계자별 비용을 공정하게 보여 준다. 다만 10월 27일 시작은 나머지 6주 담당자, tutor 동의, 종이 예약 시험 및 주당 2시간 확보가 확인된 경우에만 정당화된다."
+    }
+  }
+}

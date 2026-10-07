@@ -1,0 +1,3 @@
+Hi Priya — could you check the three account names in `demo-accounts-v2` for tomorrow's Northstar demo and reply in this thread with "Approved" or the required corrections by 15:00 UTC on 8 October 2026? You're responsible for the customer naming check; I'll apply any corrections to the slides.
+
+We need the names settled before Leo records the walkthrough at 16:00 UTC that day, so the recording and slides match. I realise this is a fairly short turnaround. If you can't finish by 15:00 UTC, please let me know in this thread by that deadline. If we have no approval then, I'll use "Sample account A", "Sample account B", and "Sample account C" in both materials. Thanks for taking a look.

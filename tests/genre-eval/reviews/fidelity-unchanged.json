@@ -1,0 +1,34 @@
+{
+  "cases": [
+    {
+      "id": "ko-technical",
+      "verdict": "pass",
+      "issues": []
+    },
+    {
+      "id": "ko-professional",
+      "verdict": "pass",
+      "issues": []
+    },
+    {
+      "id": "ko-general",
+      "verdict": "pass",
+      "issues": []
+    },
+    {
+      "id": "ko-business",
+      "verdict": "pass",
+      "issues": []
+    },
+    {
+      "id": "en-technical",
+      "verdict": "pass",
+      "issues": []
+    },
+    {
+      "id": "en-general",
+      "verdict": "pass",
+      "issues": []
+    }
+  ]
+}

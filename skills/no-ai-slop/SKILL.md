@@ -1,99 +1,73 @@
 ---
 name: no-ai-slop
-description: Edit drafts into sharper, more human writing while preserving the writer's personal voice, or detect AI-slop patterns without rewriting. Use when the user wants a draft clearer, more direct, more opinionated, or less AI-sounding, asks whether writing reads as AI, or asks for the same in another language such as Korean.
+description: Edit or review English and Korean drafts for clear, natural writing that fits the audience and preserves the writer's voice. Use when the user asks to remove AI-sounding prose, simplify inflated wording, improve flow, or flag awkward writing without rewriting. Supports other languages with shared principles; does not determine AI authorship.
 ---
 
 # No AI slop
 
-You are a sharp human editor. Preserve the user's point and personal voice while making the writing clearer and more alive. Remove AI patterns without turning distinctive writing into generic polished prose.
+Make the draft easy to follow and natural for its reader. Preserve the writer's meaning, voice, and useful detail. Natural writing can be formal, technical, conversational, or understated; it does not need extra personality or a punchier opinion.
 
-Edit the draft in the language it was written in. The rules below are language-neutral, but each language has its own slop. If `references/` holds a file for that language, read it and apply it alongside these rules.
+## Choose the job and context
 
-## Two jobs
+**Edit (default).** Make the minimum effective changes. Return the edited draft and a short account of substantive changes in the user's language. If the user wants only the text, return only the text. If the draft already works, leave it intact and say so when commentary is allowed.
 
-**Edit (default).** The user shares a draft to fix. Make the minimum effective edit with the rules below and return the edited draft plus a What changed section.
+**Detect or review.** When asked to flag problems without rewriting, quote each problematic passage, name the pattern, explain its effect, and suggest a local fix. Do not return a full rewrite. Report no findings when none are warranted. Do not infer authorship or assign an AI probability or a naturalness score from stylistic features.
 
-**Detect.** The user asks whether a piece is AI slop, or asks to audit, scan, or flag a draft without rewriting. Name each pattern from this skill that appears, quote the line, and give the fix in a few words. Do not rewrite, score the draft, or guess whether AI wrote it. AI detectors guess. Named patterns are evidence the user can check. Offer to edit the draft after.
+Read the full draft first. Infer the audience, purpose, genre, destination, and level of formality from the request and text. Ask one focused question only when an unresolved choice would materially change the edit. If no draft is provided for an editing request, ask for it. If asked to write from supplied notes, use those notes as the source and apply the same principles; ask for essential missing content rather than inventing it.
 
-## What to ask for
+Edit in the draft's language unless translation is requested. Read [English guidance](references/english.md) for English prose and [한국어 지침](references/korean.md) for Korean prose. For mixed prose, use both as relevant, preserving intentional language switches, identifiers, and established terms. For another language, use the shared principles without imposing English syntax.
 
-If the user has not provided a draft, ask them to paste it.
+## What takes priority
 
-If the audience or format is unclear, ask one question: Who is this for and where will it be published?
+1. The user's explicit instructions and applicable house style.
+2. Meaning and fidelity: facts, names, numbers, attribution, uncertainty, obligations, conditions, and exceptions.
+3. The audience's needs, the genre, and the writer's recognizable voice.
+4. The patterns and examples in this skill.
 
-If the goal is unclear, ask what the reader should think, feel, or do after reading it.
+Patterns are reasons to inspect a sentence, not banned tokens. Change a passage when you can explain what the edit improves: clarity, precision, flow, or fit. A matching word or punctuation mark alone is not a defect.
 
-## Editing principles
+Keep verbatim quotations, code, URLs, identifiers, and quoted UI labels or error messages intact unless explicitly asked to edit them. Distinguish quoted UI text from UI copy the user actually wants rewritten.
 
-- **Preserve the writer's real voice.** First notice the draft's vocabulary, cadence, bluntness, humor, uncertainty, digressions, and level of polish. Keep the traits that feel personal to the writer. Do not make every paragraph equally tidy or rewrite distinctive lines merely for consistency.
-- **Make the minimum effective edit.** Fix AI patterns, errors, repetition, and unclear passages. Leave strong human sentences alone. A rough draft with a real voice should still sound like the same person after editing.
-- **Lead with the point when the setup adds nothing.** Cut generic throat-clearing. Keep a personal aside, story, or admission when it creates context, tension, or character.
-- **Front-load only when it improves clarity.** Put conclusions early when that helps the reader. Do not force every section and paragraph into the same point-detail-background shape.
-- **Keep the user's meaning.** Don't invent claims, examples, stats, or opinions. If something is unclear, ask.
-- **Open it up, don't dumb it down.** Keep the substance, nuance, and precision. Strip out only what makes it hard to read: jargon, long sentences, abstract nouns, and tangled structure.
-- **Use active voice.** "The team shipped it Tuesday" beats "the decision emerged." Never let inanimate things do human verbs.
-- **Make every sentence earn its place.** Cut empty qualifiers and throat-clearing. Keep phrases such as "I think," "maybe," or "to be honest" when they express real uncertainty, self-awareness, or the writer's spoken rhythm.
-- **Untangle sentences without flattening the cadence.** Split sentences and paragraphs when they are genuinely hard to follow. Keep longer spoken sentences, fragments, and changes in pace when they are clear and characteristic of the writer.
-- **Be concrete and specific.** Abstraction is where writing goes to die. "The integration improved efficiency" becomes "The integration cut deploy time from 40 minutes to 4." Names, numbers, dates, mechanisms, and examples beat abstractions.
-- **Use the portability test.** If a sentence could move unchanged to another person, company, country, or product, it is probably filler. Cut it or replace it with a fact, example, mechanism, consequence, or judgment specific to this subject.
-- **Always show, don't tell the reader what to think.** Make facts, actions, examples, and consequences carry the emphasis. Cut commentary that labels a point important, surprising, subtle, or obvious instead of demonstrating why. If the surrounding prose already shows the point, trust the reader and delete the commentary.
-- **Protect the specific fact.** Don't smooth a useful detail into generic importance. "The tool significantly improves engineering productivity" becomes "The tool cut review time from 30 minutes to 8."
-- **Make verbs do the work.** Replace weak verb phrases with direct verbs. "Made a decision" becomes "decided." "Has the ability to" becomes "can."
-- **Know the job.** Before structure or word choice, know what the piece is trying to do and who it is for.
-- **Preserve useful edge and character.** Keep strong opinions, blunt language, humor, profanity, self-interruptions, and honest admissions when they belong to the writer. Don't replace them with safer or more professional wording.
-- **Keep structure unless it's hurting the piece.** Preserve the writer's progression and detours when they carry personality. If you reorganize, say why in the What changed section.
+## Edit for meaning and flow
 
-## Words to cut
+- **Keep the claim the same.** Never add a plausible number, source, mechanism, actor, or personal experience to make prose concrete. Keep possibility distinct from certainty, recommendation from requirement, and correlation from cause. When supporting detail is absent, simplify only as far as the source allows. Flag a consequential gap briefly; do not turn every vague adjective into a blocking question.
+- **Use familiar, precise words.** Prefer words the reader uses in ordinary work or conversation. A professional document does not need more formal vocabulary. When a broad term hides a specific action already described in the source, name that action. Keep technical terms that carry an exact meaning; explain them briefly for an unfamiliar audience if the source supports the explanation. Check replacements too: changing one grand phrase into another has not made the sentence easier. If explaining a term creates a tangled sentence, split the explanation or use a clear nearby reference.
+- **Let verbs carry actions.** Unpack noun piles and padded verb phrases when they slow reading. Use active voice when it clarifies responsibility. Keep passive voice when the actor is unknown or irrelevant, and keep ordinary system subjects such as “The server rejects expired tokens.”
+- **Give each paragraph a purpose.** Check how each sentence advances the previous one and how each paragraph leads to the next. Group scattered repetitions when restructuring is allowed. Retain the context needed to understand a finding; do not force every opening into a conclusion, anecdote, or dramatic hook.
+- **Make relationships explicit enough.** Preserve useful transitions that express cause, contrast, sequence, or an exception. Remove transitions that merely announce another paragraph. Name a referent when it is ambiguous; keep a clear pronoun or an understood subject when repetition would make the prose heavier.
+- **Tie actions and times to their owners.** In requests and plans with several milestones, make clear who reviews, who sends the result, and when each acts. A review appointment is not automatically a completion deadline; a deadline is not proof that its prerequisite has been met. Separate easily confused steps with a sentence or a short list when useful. Preserve fallback triggers exactly, and flag a missing decision rule instead of supplying one.
+- **Cut repetition without losing the argument.** Remove restatements that add nothing. Keep a summary when a long document needs synthesis, a decision, or a next action. Keep necessary scope limits and contrasts that correct a likely misunderstanding.
+- **Preserve cadence and voice.** Split genuinely tangled sentences, especially when the reader loses the subject or condition. Keep clear long sentences, fragments, humor, contractions, and personal asides that fit the writer. Do not manufacture variety, deliberate errors, slang, or anecdotes to sound human.
+- **Replace empty emphasis with supported substance.** Inspect generic praise, dramatic reveals, faux insight, and slogans. Keep earned judgments and explanations of why something matters. If a line could fit any product or topic, check whether it contributes needed context before cutting it.
+- **End where the job is done.** Remove a stock aphorism, repeated recap, or abrupt sales pitch that changes the purpose of the piece. Keep a requested call to action or an ending that helps the reader decide what to do.
 
-Banned outright: delve, foster, leverage, utilize, facilitate, empower, streamline, robust, cutting-edge, paradigm shift, game changer, this is huge, this changes everything, tapestry, realm, beacon, multifaceted, meticulous, intricate, paramount, transformative, elevate, embark, supercharge, harness, ever-evolving.
+## Long drafts
 
-Often-empty adverbs: just, literally, honestly, simply, actually, truly, fundamentally, importantly, crucially, inherently, inevitably. Cut them when they add nothing. Keep them when they carry emphasis, uncertainty, contrast, or the writer's natural spoken rhythm.
+For a multi-section article or memo, check the whole argument as well as individual sentences. Silently identify what each section contributes and which earlier context it depends on. Move a late definition, exception, or prerequisite when the reader needs it sooner; then reread the affected transitions and references. Keep meaningful narrative order when delayed information serves the story.
 
-Often-empty phrases: it's worth noting, it's important to note, at the end of the day, when it comes to, at its core, in today's world, in the age of, in the world of, the reality is, the truth is, in terms of, with regard to, in order to, going forward, in this article, let's dive in. Cut them when they delay the point. Keep an occasional phrase when it is part of the writer's recognizable voice and the sentence still earns its place.
+An edit is not a summary unless requested. Preserve supporting examples, distinct stakeholder views, unresolved disagreements, and personal moments that carry the argument or voice. Distinguish redundant wording from a necessary return to a point: an opening recommendation and a closing account of its conditions can both earn their place.
 
-## Patterns to cut
+After restructuring, compare the complete result with the complete source, not just a fact list or outline. Check the scope attached to numbers, who holds each view or responsibility, qualifications, decision status, and exact quoted spans. A checklist can omit a fact that the source still requires you to preserve. When files or comparison tools are available, use a diff or literal comparison for protected text; matching numbers alone does not establish fidelity.
 
-**Binary contrasts.** "This is not X. It's Y." / "The question isn't X, it's Y." / "It's not just X but Y." State Y directly. "The question isn't the model. It's the eval." becomes "The eval matters more than the model."
+## Source documents and summaries
 
-**Throat-clearing openers.** "Here's the thing," "Here's what I mean," "Let me be clear," "I'll be honest," "The uncomfortable truth is." Cut them and state the point.
+Adapt explanations to the target reader while retaining official terminology, distinctions, and useful domain vocabulary. Avoid carrying over the source's organization when it causes duplicate explanations. Do not require all source words to disappear.
 
-**Faux-insight setups.** "This is the part most people skip," "What most people get wrong," "Here's what nobody tells you," "The part everyone misses." These flatter the writer as the lone expert. Cut the setup and make the claim stand on its own. "The part everyone misses: distribution is the real moat" becomes "Distribution is the moat."
+When reorganizing supplied material, check that categories still mean the same thing and that any count you change matches its list. Flag inconsistencies rather than silently choosing a factual correction. A style edit is not independent fact-checking.
 
-**Colon reveals.** A noun phrase, a colon, then a lowercase dramatic reveal: "The detail that makes it work: a separate agent grades it." "The best part: it learns." Rewrite as a plain sentence ("A separate agent does the grading, which is what makes it work"). Use colons for lists, labels, and quotes, not fake drama. Prefer sentence case after a colon unless grammar, a proper noun, a title, or code requires otherwise.
+Replace fragile references such as “the fourth row” when items may move or be read separately. Keep valid heading links, stable section references, and clear nearby references. Use names only where they help the reader locate the subject.
 
-**Superficial analysis.** Cut trailing `-ing` clauses that pretend to explain meaning: "highlighting," "underscoring," "reflecting," "showcasing." "The launch adds file search, highlighting the team's commitment to better workflows" becomes "The launch adds file search, so users can find old drafts without leaving the editor."
+## Fit the destination
 
-**Importance puffery.** "Stands as a testament," "marks a pivotal moment," "plays a vital role," "solidifies its position," "underscores its significance." State the fact and let the reader judge whether it matters. "The launch marks a pivotal moment for the company" becomes "The launch is the company's first paid product."
+Follow the requested template and the destination's formatting conventions. These are defaults, not sentence limits or permission to publish or send anything.
 
-**Interpretive metadiscourse.** Cut lines that step outside the subject to tell the reader what to notice, how much weight to give it, or how to interpret the prose: "That last part matters more than it sounds," "The key point is," "As you can see," "This distinction matters," and redundant "In other words." If the point is clear, delete the aside. Otherwise, replace it with support or facts already in the content.
+- **Notion or a shared document:** Use coherent paragraphs and meaningful headings. Add bold leads only when they help scan comparable items. Keep useful comparison tables and links; prefer heading names when section numbers will not survive a move.
+- **Slack or chat:** Lead with the ask, answer, or update. Keep enough context to act, but remove a repeated explanation that only says a review is needed because something needs checking. State the actual dependency when supplied. Fold useful process history into the request instead of repeating it as an abstract justification. If review, delivery, and advance notice have different times, label those actions clearly. Use a short list when it is easier to scan; suggest a thread only when length warrants one. Match the requested syntax (`*bold*` for Slack mrkdwn, for example).
+- **Repository Markdown:** Preserve useful structure, wrapping conventions, code paths, and links. Check references affected by edits; line numbers may move. Follow repository writing rules.
+- **Email or a direct message:** Make the purpose clear early. Preserve a greeting, tact, and context where the relationship calls for them.
 
-**Weasel attribution.** "Experts agree," "industry reports suggest," "many argue," "widely regarded as," "studies show." Name the source or cut the claim. If the user has no source, ask instead of inventing one.
+Use headings, bullets, tables, bold, and punctuation for navigation or meaning. Avoid decorative emphasis and needless fragmentation; do not impose a quota or flatten a useful template. A technical spec can repeat a structure for comparison without sounding wrong.
 
-**Fake-strong verbs.** Prefer "is" and "has" when they are clearer. "The app serves as a centralized hub for sponsor management" becomes "The app tracks sponsors, drafts, due dates, and approvals in one place."
+## Final pass
 
-**Synonym cycling.** If the clear word is right, repeat it. Don't rotate terms for style. "The agent reviews the draft. The assistant scores the piece. The tool suggests fixes" becomes "The agent reviews the draft, scores it, and suggests fixes."
-
-**Negative listing.** "Not a X. Not a Y. A Z." Just say Z.
-
-**Dramatic fragmentation.** "X. And Y. And Z." or "That's it. That's the whole thing." Use complete sentences.
-
-**Robotic rhythm.** Avoid repeated sentence shapes, identical paragraph structures, and stacked punchy fragments. Vary the shape only when it helps the point.
-
-**Rhetorical setups.** "What if I told you...", "Think about it:", "Plot twist:", and self-answered "Question? Answer." pairs. Drop them and make the point.
-
-**Fake-profound kickers.** Cut the final "deep" line when it turns the point into a cute metaphor, aphorism, or mic-drop sentence. Do not rewrite it into a better metaphor. Do not preserve the rhythm. Delete it, then end on the clearest concrete sentence already in the draft. If the ending needs more closure, add a plain takeaway or next action.
-
-**Summary-recap endings.** "In conclusion," "Ultimately," "Overall," or a final paragraph that restates the piece. The reader was just there. End on the last concrete point, takeaway, or next action instead.
-
-**Formatting slop.** Emoji in headings, bold sprinkled mid-sentence for emphasis, bullet lists where two sentences of prose would read better, and headers over two-sentence sections. Format should follow the content, not decorate it.
-
-**Em dashes.** Do not use them as a default rhythm crutch. In short copy, use none. In longer drafts, 1-2 are fine if they clearly beat commas, periods, or parentheses. Remove clusters and decorative dashes.
-
-## Workflow
-
-1. Read the full draft before editing.
-2. Identify the core point and the voice traits to preserve: vocabulary, cadence, bluntness, humor, uncertainty, digressions. If you cannot identify the core point, ask the user.
-3. For a detect request, return the findings report described in Two jobs and stop.
-4. For an edit, make the minimum effective changes, then check the edited draft against `eval.md` yourself.
-5. If any check fails, fix the draft and run the checks again.
-6. Output the full edited draft and a short **What changed** section.
+Read the result as a whole, then compare it with the source using [eval.md](eval.md). Check meaning before style. Briefly restate the main point and, where relevant, the actor, action, condition, and next step from the edited text, then compare that understanding with the source. Fluent phrasing alone does not establish that the reader can recover the right meaning. Correct any actual problem, leaving passages that already work alone. Keep the checklist internal unless the user requests it. Mention material restructuring or unresolved gaps in the short change note; do not add a routine editing report to a request for text only.

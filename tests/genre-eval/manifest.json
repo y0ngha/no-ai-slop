@@ -1,0 +1,277 @@
+[
+  {
+    "id": "ko-technical",
+    "genre": "technical explanation",
+    "audience": "주니어 엔지니어",
+    "editing_request": "쉽게 이해하도록 설명을 다듬되 동작과 예외를 보존하세요. facts는 비포괄적 목록입니다.",
+    "facts": [
+      "계정당 최대 20개, 파일당 50 MiB. 1 MiB는 1,048,576바이트. failed와 done은 한도 제외, retry_wait는 포함. 등록 전 거절은 시도 아님.",
+      "실행기 최대 2개. 등록 시간, 같으면 등록 번호 순서.",
+      "30초 무응답 또는 503만 자동 재시도, 201만 성공. 나머지 코드는 실패. 최초 포함 최대 3회, 대기는 2초와 6초.",
+      "재시도 대기는 실행기를 점유하지 않고 원래 순서를 유지한다. 대기 종료는 즉시 전송 보장이 아니다.",
+      "upload_key는 자동 재시도 동안 유지. 서버는 24시간 결과 보관, 중복 요청에는 같은 파일 번호와 201 반환.",
+      "취소는 자동 재시도를 멈추지만 서버 파일을 삭제하지 않는다. 메모리 대기열은 새로 고침 시 사라지고 재등록은 새 키라 중복 방지 미보장."
+    ],
+    "protected_spans": [
+      "waiting",
+      "sending",
+      "retry_wait",
+      "failed",
+      "done",
+      "cancelled",
+      "upload_key",
+      "대기열이 가득 찼습니다",
+      "총 3회 시도"
+    ]
+  },
+  {
+    "id": "ko-professional",
+    "genre": "professional report",
+    "audience": "비전문 제품 리더",
+    "editing_request": "결과와 한계, 결정을 쉽게 파악하도록 다듬으세요. 관찰과 가설, 제안과 확정을 구분하세요. facts는 비포괄적 목록입니다.",
+    "facts": [
+      "2026년 9월 14~16일 시험. 같은 생산일 480g 유리 용기, A와 B 각 24개 총 48개. 상자와 테이프 동일.",
+      "60cm 높이에서 바닥면, 긴 옆면, 짧은 옆면 각 1회, 바닥 18mm 합판. 실제 배송을 거치지 않았다. 관찰자는 종류를 알았고 미세 균열 장비 검사는 없었다.",
+      "파손 A 1/24 약 4.2%, B 2/24 약 8.3%. 배송 파손 두 배라는 결론은 불가.",
+      "모서리 눌림 A 7, B 4. 파손과 중복 가능하며 겹치는 수는 미기록.",
+      "별도 시간 시험은 1명이 종류별 12개, 중앙값 A 42초 B 49초. B는 첫 사용. 재료비 A 310원 B 270원은 부가세·배송비 제외, 계약 전.",
+      "B 전면 적용 보류, A 출하 유지, B 고객 배송 미승인. 후속 제안은 생산일 3개 묶음, 종류별 60개 총 120개, 관찰자 눈가림. 자재 기준 표본 수로 통계 보장 아님.",
+      "품질팀 시험안 9월 23일, 제품기획 자재비 결정 9월 25일. 사전 조건·합격 기준 합의, 완료일 미정."
+    ],
+    "protected_spans": [
+      "내용물 균열 또는 뚜껑 이탈이 있으면 파손"
+    ]
+  },
+  {
+    "id": "ko-general",
+    "genre": "general personal article",
+    "audience": "함께 사는 집을 정리하는 일반 독자",
+    "editing_request": "따뜻하고 절제된 개인 목소리로 다듬으세요. 개인 경험을 보편 법칙으로 확대하지 마세요. facts는 비포괄적 목록입니다.",
+    "facts": [
+      "토요일 장보기 전 찬장 두 칸 정리. 열린 국수 3봉지와 계피 2통 발견.",
+      "아침 오트밀, 저녁 국수 습관을 고려해 아래 칸 좌우 배치. 기존 낮은 바구니에 열린 봉지, 새 포장은 뒤에 둠.",
+      "제품 보관 안내 확인, 냉장 필요 식품은 찬장 밖으로. 상대 물건은 혼자 버리지 않는다. 겨울 차는 남기고 둘 다 안 먹는 과자는 치움.",
+      "종이 구매 목록은 완벽하지 않음. 첫 주 소금 누락으로 추가 장보기. 최근 3회 국수 중복 구매 없음은 정리 효과인지 덜 먹어서인지 미확인.",
+      "윗칸은 다음 주말 계획."
+    ],
+    "protected_spans": []
+  },
+  {
+    "id": "ko-business",
+    "genre": "business handover plan",
+    "audience": "제품운영·고객경험·제품기획·웹개발 담당자",
+    "editing_request": "책임, 일정, 범위와 의존 관계를 찾기 쉽게 다듬으세요. 기한과 예외를 보존하세요. facts는 비포괄적 목록입니다.",
+    "facts": [
+      "2026년 11월 2일 오전 10시 KST 창구 전환 예정. 한국어 웹 알림 18개 접수·승인 이력 관리만 포함. 앱 푸시·이메일·번역 제외. 배포는 웹개발, 승인은 제품기획.",
+      "이서진 자료 10월 23일 오후 3시, 박민서 확인 26일 오후 5시 및 당일 누락 표시, 이서진 보완 27일 정오.",
+      "정하린 양식 확정 27일 오후 3시. 식별자·이유·원하는 적용일 필수, 적용일 보장 아님. 오준호는 양식 수신 후 28일 오후 5시 시험 요청 1건, 실제 문구 변경 없음.",
+      "29일 오후 2시~2시 30분 합동 연습. 박민서 접수, 정하린 승인·반려, 오준호 배포 요청 수신. 이서진 안내문 당일 오후 5시 수정. 불참 시 박민서 재조율, 녹화 대체 불가.",
+      "정하린 30일 오후 3시 전환 판단. 자료·양식·시험·연습 전부 완료 필요. 미완료면 기존 운영 유지, 당일 오후 5시 새 전환일 공지.",
+      "전환 전 접수 이서진, 전환부터 박민서. 중복은 먼저 접수한 요청과 담당자 유지, 모호하면 확인 후 병합. 11월 6일 오후 4시 잔여 확인은 강제 종료 아님.",
+      "권한 문제는 박민서에서 이서진, 이서진에서 관리자. 양식 지연은 시험 지연. 각 담당자가 예상 지연을 정하린에 공유. 모든 시간 KST."
+    ],
+    "protected_spans": [
+      "한국 표준시(KST)"
+    ]
+  },
+  {
+    "id": "ko-slack",
+    "genre": "Slack request",
+    "audience": "문구 검토 동료 민서",
+    "editing_request": "공손하게 다듬고 담당, 행동, 기한, 이유와 대안을 쉽게 파악하게 해 주세요. facts는 비포괄적 목록입니다.",
+    "facts": [
+      "민서가 알림 문구 6개를 검토하고 확인 결과 칸에 사용 가능 또는 수정 의견 작성.",
+      "2026년 10월 9일 금요일 오후 3시 KST 기한. 작성자는 오후 4시 디자인팀 전달. 검토가 시안 확정의 선행 조건.",
+      "어려우면 당일 정오 KST까지 가능한 완료 시간 공유. 작성자가 기존 문구 임시 시안을 디자인팀에 요청."
+    ],
+    "protected_spans": [
+      "확인 결과",
+      "사용 가능"
+    ]
+  },
+  {
+    "id": "en-technical",
+    "genre": "technical explanation",
+    "audience": "Junior engineers maintaining a fictional search refresh worker",
+    "editing_request": "Edit for clarity, natural wording, and suitable pacing while preserving meaning, voice, uncertainty, and concrete details. The facts list is explicitly non-exhaustive; preserve all meaningful information in the source, not only listed facts. Do not invent facts.",
+    "facts": [
+      "Alder uses a document store as the source of truth and a separately refreshed search index.",
+      "The worker runs every five minutes, building a separate generation from a snapshot of published documents.",
+      "snapshot_at records snapshot time, not build completion time.",
+      "Checks require that the generation opens, all indexed documents have IDs, and document count changes by no more than 15%; larger differences require human review.",
+      "A failed check preserves the active pointer; passing checks permit an atomic pointer change. Existing requests may finish using the old generation.",
+      "After a refresh failure, the active generation is eligible only when its age at request start is at most 20 minutes, calculated using the server clock.",
+      "Exactly 20 minutes is eligible; 20 minutes and one second is ineligible. A slow successful build does not reset snapshot age.",
+      "Eligible fallback results have stale: true and the specified notice. An empty list is a valid result and must not trigger a different-generation retry.",
+      "An absent or over-age active generation returns HTTP 503, the specified error code, and no result items.",
+      "No unrestricted database-query fallback is provided because permissions and load would differ.",
+      "Tests use a fixed clock for the age boundary and verify failed count checks preserve the pointer. Generation age and failed-refresh count are separate metrics; retries never extend an existing snapshot deadline."
+    ],
+    "protected_spans": [
+      "Alder",
+      "gen_204",
+      "snapshot_at",
+      "request_started_at - snapshot_at",
+      "stale: true",
+      "Results may be up to 20 minutes old.",
+      "SEARCH_TEMPORARILY_UNAVAILABLE",
+      "Search is temporarily unavailable. Please try again shortly.",
+      "15%",
+      "HTTP 503"
+    ]
+  },
+  {
+    "id": "en-professional",
+    "genre": "professional usability study report",
+    "audience": "Non-specialist product leads deciding which label to test next",
+    "editing_request": "Edit for clarity, natural wording, and suitable pacing while preserving meaning, voice, uncertainty, and concrete details. The facts list is explicitly non-exhaustive; preserve all meaningful information in the source, not only listed facts. Do not invent facts.",
+    "facts": [
+      "The Cedar prototype compares Save draft (A) with Save for later (B) for retaining an unfinished request; Submit request sends it to an approver.",
+      "The screen otherwise stayed identical and the prototype sent no real requests.",
+      "Twelve participants attended moderated English desktop sessions on 14 and 15 September 2026. All arranged shifts monthly or more often; none had used Cedar.",
+      "Six saw each version first; all completed a task in each version with different names and dates. Balanced order does not eliminate learning effects.",
+      "On first exposure five of six Version B participants and three of six Version A participants chose the intended action without prompting.",
+      "Across exposures nine explained no approver notification in B and seven in A; one participant clicked correctly in both but still expected a manager alert.",
+      "Four associated draft with email; three found draft technical or uncommon in scheduling. Two asked whether Save for later would automatically submit later.",
+      "Recommend Save for later in the next prototype with the specified confirmation sentence and retain Submit request. This is not release approval and adds no automatic submission.",
+      "A second round with eight new participants should explicitly check the automatic-submission misunderstanding before a 6 October 2026 release review.",
+      "Translations, mobile, screen readers, and real deadline pressure were not tested; the study does not prove overall usability improvement."
+    ],
+    "protected_spans": [
+      "Cedar",
+      "Save draft",
+      "Save for later",
+      "Submit request",
+      "Only you can see this until you submit it.",
+      "14 and 15 September 2026",
+      "6 October 2026"
+    ]
+  },
+  {
+    "id": "en-general",
+    "genre": "everyday personal article",
+    "audience": "General readers interested in neighbourhood life",
+    "editing_request": "Edit for clarity, natural wording, and suitable pacing while preserving meaning, voice, uncertainty, and concrete details. The facts list is explicitly non-exhaustive; preserve all meaningful information in the source, not only listed facts. Do not invent facts. Keep the warm, restrained first-person voice and avoid turning the experience into a sweeping life lesson.",
+    "facts": [
+      "A fourteen-flat building has a shared tool cupboard by the back gate.",
+      "The narrator supported the idea but avoided borrowing for almost a month despite a loose shelf, fearing damage attribution and overdue returns.",
+      "Ruth lives on the ground floor and showed the narrator the loan notebook and the scratched drill.",
+      "The drill case has a warning about a sticking battery.",
+      "The narrator borrowed on Saturday, promised Sunday, spent twenty minutes fixing the shelf and five cleaning the case, and returned it on Sunday.",
+      "The narrator contributed a socket set in a blue tin with a flat number underneath.",
+      "Another borrower reported a previously missing smallest socket; the narrator found it in a kitchen drawer where it had been for months.",
+      "Loans last no more than three days unless a longer loan is arranged with the owner.",
+      "The narrator still double-checks the notebook but now borrows tools and knows Ruth better."
+    ],
+    "protected_spans": [
+      "Ruth",
+      "Name, flat, tool, return day,",
+      "Battery sticks. Pull straight."
+    ]
+  },
+  {
+    "id": "en-business",
+    "genre": "cross-team handover plan",
+    "audience": "Launch, Support, IT, Finance, and Sales teams running a fictional pilot",
+    "editing_request": "Edit for clarity, natural wording, and suitable pacing while preserving meaning, voice, uncertainty, and concrete details. The facts list is explicitly non-exhaustive; preserve all meaningful information in the source, not only listed facts. Do not invent facts. Make responsibilities, readiness conditions, and dates easy to locate without changing scope.",
+    "facts": [
+      "Support becomes the six Beacon pilot customers' first contact at 09:00 UTC on 19 October 2026 if readiness is confirmed; Launch owns unresolved setup defects through 30 October 2026.",
+      "The definitive scope list is beacon-pilot-register-v3; included work is inbound questions, access requests, and incident-update coordination. New onboarding and subscription changes are excluded; Sales owns commercial questions.",
+      "Launch lead Maya Chen delivers account notes, known issues, and a walkthrough by 17:00 UTC on 14 October. Notes require a primary contact and dated open commitments.",
+      "Support lead Arun Patel reports gaps by 12:00 UTC on 15 October; Maya resolves them by 16:00 UTC on 16 October, all in 2026.",
+      "IT must grant four Support agents pilot-console access and Finance must confirm a billing escalation contact by 12:00 UTC on 16 October 2026. Arun checks both.",
+      "If either dependency remains open at 16:00 UTC on 16 October, Arun marks BEACON-42 Not ready and Launch keeps customer requests. Next review is 12:00 UTC on 19 October and does not automatically transfer ownership.",
+      "When ready on 16 October, Arun marks BEACON-42 Ready for transfer; Maya then sends customer contact instructions.",
+      "In the first week Support sends Launch setup defects with account, reproduction steps, and impact, and keeps communicating with the customer.",
+      "Maya and Arun review open setup defects at 15:00 UTC on 30 October 2026. Remaining defects need engineering owners and next-update dates before Launch responsibility ends; Arun owns the ongoing queue."
+    ],
+    "protected_spans": [
+      "Beacon",
+      "beacon-pilot-register-v3",
+      "Maya Chen",
+      "Arun Patel",
+      "BEACON-42",
+      "Not ready",
+      "Ready for transfer",
+      "09:00 UTC on 19 October 2026",
+      "17:00 UTC on 14 October 2026",
+      "12:00 UTC on 15 October 2026",
+      "16:00 UTC on 16 October 2026",
+      "12:00 UTC on 16 October 2026",
+      "12:00 UTC on 19 October 2026",
+      "15:00 UTC on 30 October 2026"
+    ]
+  },
+  {
+    "id": "en-slack",
+    "genre": "polite Slack request",
+    "audience": "Priya, who owns the customer naming check for a demo",
+    "editing_request": "Edit for clarity, natural wording, and suitable pacing while preserving meaning, voice, uncertainty, and concrete details. The facts list is explicitly non-exhaustive; preserve all meaningful information in the source, not only listed facts. Do not invent facts. Keep the tone collegial and the message suitable for Slack.",
+    "facts": [
+      "Priya must check three account names in demo-accounts-v2 and reply in the thread with approval or corrections by 15:00 UTC on 8 October 2026.",
+      "Priya owns the naming check; the sender applies slide corrections.",
+      "Leo records the Northstar walkthrough at 16:00 UTC on the same day and names need to match across slides and recording.",
+      "If unable to finish, Priya should notify the thread by the same 15:00 UTC deadline.",
+      "Without approval by the deadline the sender uses Sample account A, Sample account B, and Sample account C in both materials."
+    ],
+    "protected_spans": [
+      "Priya",
+      "Northstar",
+      "demo-accounts-v2",
+      "Approved",
+      "15:00 UTC on 8 October 2026",
+      "Leo",
+      "16:00 UTC",
+      "Sample account A",
+      "Sample account B",
+      "Sample account C"
+    ]
+  },
+  {
+    "id": "ko-holdout",
+    "genre": "mixed technical explanation and Slack request",
+    "audience": "기술 배경이 없는 운영팀 담당자",
+    "editing_request": "권한 변화와 요청을 이해하기 쉽게 다듬되 역할 구분, 시점과 지연 시 동작을 유지하세요. facts는 비포괄적 목록입니다.",
+    "facts": [
+      "2026년 10월 20일 오전 10시 KST 적용. 문서 삭제나 공개 범위 확대 없음, 현재 역할 유지.",
+      "열람자는 읽기 가능 다운로드 불가. 편집자는 읽기·내용 수정·다운로드 가능, 역할 변경 불가. 관리자는 편집자 기능 및 초대·역할 변경. 관리자도 작성자 변경 불가.",
+      "기존 다운로드 파일 회수 없음. 기존 링크에도 로그인 역할 적용. 화면 복사 등 모두 차단한다는 보장 없음.",
+      "지수는 다운로드 필요한 열람자와 이유를 10월 16일 오후 2시 KST까지 권한 검토표에 작성. 관리자 윤서 검토, 자동 승격 없음. 대상 없으면 해당 없음.",
+      "어려우면 같은 기한까지 예상 완료일 전달. 늦어도 변경 일정 유지, 그동안 열람자는 다운로드 불가."
+    ],
+    "protected_spans": [
+      "열람자",
+      "편집자",
+      "관리자",
+      "해당 없음"
+    ]
+  },
+  {
+    "id": "en-holdout",
+    "genre": "mixed technical explanation and Slack request",
+    "audience": "Nonengineer colleagues preparing a training session",
+    "editing_request": "Edit for clarity, natural wording, and suitable pacing while preserving meaning, voice, uncertainty, and concrete details. The facts list is explicitly non-exhaustive; preserve all meaningful information in the source, not only listed facts. Do not invent facts. Keep the message suitable for a team thread and preserve the distinctions among roles. This source is held out from the first evaluation.",
+    "facts": [
+      "Marlin separates report visibility from row-download permissions.",
+      "A Viewer can open reports and change on-screen filters. An Analyst can also export CSV only if the workspace owner enabled exports.",
+      "An Owner can enable exports but does not automatically have Analyst permission.",
+      "Filtered exports allow at most 5,000 rows, including exactly 5,000. At 5,001 or more the whole download is blocked with the specified message; rows are never silently truncated.",
+      "A partial file might incorrectly appear complete for a monthly total.",
+      "Leah must confirm in MARLIN-18 by 11:00 UTC on 12 October 2026 that training-workspace exports are enabled and both trainers have Analyst permission.",
+      "If either condition is missing at the deadline, the sender uses a prepared example CSV and records the access issue for follow-up; training can still proceed."
+    ],
+    "protected_spans": [
+      "Marlin",
+      "Viewer",
+      "Analyst",
+      "Owner",
+      "CSV",
+      "5,000",
+      "5,001",
+      "Narrow your filters to export 5,000 rows or fewer.",
+      "Leah",
+      "MARLIN-18",
+      "11:00 UTC on 12 October 2026"
+    ]
+  }
+]

@@ -1,0 +1,154 @@
+{
+  "assessments": 54,
+  "unique_texts": 12,
+  "latest": [
+    {
+      "id": "ko-technical",
+      "round": "round1",
+      "text": "round1/texts/ko-technical.md",
+      "scores": {
+        "luna": 92,
+        "terra": 96,
+        "sol": 100
+      },
+      "needs_source_clarification": false
+    },
+    {
+      "id": "ko-professional",
+      "round": "round1",
+      "text": "round1/texts/ko-professional.md",
+      "scores": {
+        "luna": 94,
+        "terra": 98,
+        "sol": 100
+      },
+      "needs_source_clarification": false
+    },
+    {
+      "id": "ko-general",
+      "round": "round1",
+      "text": "round1/texts/ko-general.md",
+      "scores": {
+        "luna": 96,
+        "terra": 98,
+        "sol": 100
+      },
+      "needs_source_clarification": false
+    },
+    {
+      "id": "ko-business",
+      "round": "round1",
+      "text": "round1/texts/ko-business.md",
+      "scores": {
+        "luna": 94,
+        "terra": 100,
+        "sol": 100
+      },
+      "needs_source_clarification": false
+    },
+    {
+      "id": "ko-slack",
+      "round": "round3",
+      "text": "round3/texts/ko-slack.md",
+      "scores": {
+        "luna": 94,
+        "terra": 100,
+        "sol": 100
+      },
+      "needs_source_clarification": false
+    },
+    {
+      "id": "en-technical",
+      "round": "round1",
+      "text": "round1/texts/en-technical.md",
+      "scores": {
+        "luna": 94,
+        "terra": 98,
+        "sol": 100
+      },
+      "needs_source_clarification": false
+    },
+    {
+      "id": "en-professional",
+      "round": "round3",
+      "text": "round3/texts/en-professional.md",
+      "scores": {
+        "luna": 86,
+        "terra": 96,
+        "sol": 100
+      },
+      "needs_source_clarification": false
+    },
+    {
+      "id": "en-general",
+      "round": "round1",
+      "text": "round1/texts/en-general.md",
+      "scores": {
+        "luna": 96,
+        "terra": 100,
+        "sol": 100
+      },
+      "needs_source_clarification": false
+    },
+    {
+      "id": "en-business",
+      "round": "round2",
+      "text": "round2/texts/en-business.md",
+      "scores": {
+        "luna": 94,
+        "terra": 90,
+        "sol": 96
+      },
+      "needs_source_clarification": true
+    },
+    {
+      "id": "en-slack",
+      "round": "round2",
+      "text": "round2/texts/en-slack.md",
+      "scores": {
+        "luna": 98,
+        "terra": 96,
+        "sol": 98
+      },
+      "needs_source_clarification": true
+    },
+    {
+      "id": "ko-holdout",
+      "round": "round2",
+      "text": "round2/texts/ko-holdout.md",
+      "scores": {
+        "luna": 98,
+        "terra": 100,
+        "sol": 100
+      },
+      "needs_source_clarification": false
+    },
+    {
+      "id": "en-holdout",
+      "round": "round2",
+      "text": "round2/texts/en-holdout.md",
+      "scores": {
+        "luna": 98,
+        "terra": 100,
+        "sol": 100
+      },
+      "needs_source_clarification": false
+    }
+  ],
+  "total_normalizations": [
+    {
+      "model": "terra",
+      "round": 3,
+      "id": "ko-slack",
+      "raw_total": 1,
+      "total_out_of_100": 100
+    },
+    {
+      "model": "terra",
+      "round": 3,
+      "id": "en-professional",
+      "raw_total": 0.96,
+      "total_out_of_100": 96
+    }
+  ]
+}

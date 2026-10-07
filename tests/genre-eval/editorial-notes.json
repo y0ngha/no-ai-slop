@@ -1,0 +1,26 @@
+{
+  "ko-slack": {
+    "changes": "요청을 앞에 두고 검토 마감, 디자인팀 전달, 지연 사전 안내를 문단으로 구분했습니다. 검토가 오간 배경과 공손한 말투를 유지했습니다.",
+    "unresolved_gaps": []
+  },
+  "en-professional": {
+    "changes": "Simplified formal phrasing and replaced the ambiguous conversion label with the action observed in the study. Retained the full method, participant comments, limitations, and proposed next step.",
+    "unresolved_gaps": []
+  },
+  "en-business": {
+    "changes": "Grouped scope, materials, readiness, and closure under headings. Made the opening transfer date conditional on readiness and kept the later review distinct from an automatic transfer.",
+    "unresolved_gaps": ["The source does not specify whether unresolved gaps in the handover materials block readiness, or how a new transfer time is agreed after the 19 October readiness review. These rules have not been invented."]
+  },
+  "en-slack": {
+    "changes": "Led with the request, shortened formal phrasing, and kept the checking deadline, recording time, and no-approval fallback distinct.",
+    "unresolved_gaps": ["The source permits a reply with corrections but does not specify whether those corrections also count as approval for the fallback decision."]
+  },
+  "ko-holdout": {
+    "changes": "적용 시점을 앞에 두고 역할별 기능을 목록으로 정리했습니다. 요청과 지연 시 동작을 나눴으며 현재 역할 유지, 자동 승격 없음, 복사 방지의 한계를 보존했습니다.",
+    "unresolved_gaps": []
+  },
+  "en-holdout": {
+    "changes": "Replaced the padded introduction with a direct explanation and listed the distinct role permissions. Preserved the exact row boundary, error message, training checks, and fallback.",
+    "unresolved_gaps": []
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "model": "gpt-5.6-terra",
+  "persona": "busy operations decision-maker",
+  "cases": [
+    {
+      "id": "ko-slack",
+      "scores": {
+        "plain_words": 10,
+        "flow": 10,
+        "clarity": 10,
+        "no_slop": 10,
+        "genre_fit": 10
+      },
+      "total": 1,
+      "verdict": "ready",
+      "strongest_feature": {
+        "quote": "같은 날 정오 KST까지 가능한 완료 시간을 알려 주세요.",
+        "reason": "검토가 늦어질 때의 보고 시점과 필요한 정보를 바로 제시해 운영자가 지연 여부를 빠르게 판단할 수 있다."
+      },
+      "issues": [],
+      "answers": [
+        "민서님이 공유 문서 각 행의 ‘확인 결과’ 칸에 ‘사용 가능’ 또는 수정 의견을 2026년 10월 9일(금) 오후 3시 KST까지 남긴다. 작성자가 같은 날 오후 4시 KST에 그 의견을 디자인팀에 전달한다.",
+        "기한이 어렵다면 민서님이 같은 날 정오 KST까지 가능한 완료 시간을 알린다. 그러면 작성자가 디자인팀에 기존 문구로 임시 시안을 만들어 달라고 요청한다."
+      ]
+    },
+    {
+      "id": "en-professional",
+      "scores": {
+        "plain_words": 9,
+        "flow": 10,
+        "clarity": 10,
+        "no_slop": 9,
+        "genre_fit": 10
+      },
+      "total": 0.96,
+      "verdict": "ready",
+      "strongest_feature": {
+        "quote": "We assessed understanding from their explanations, rather than treating the button click itself as proof.",
+        "reason": "행동 성공과 의미 이해를 분리해, 다음 라벨 결정을 내릴 때 결과를 과장하지 않도록 명확히 한다."
+      },
+      "issues": [
+        {
+          "quote": "Based on both",
+          "problem": "첫 문단의 both가 앞 문장의 어떤 두 근거를 가리키는지 즉시 특정되지는 않는다.",
+          "reader_effect": "결론의 근거를 빠르게 훑는 독자는 잠시 다음 문단을 확인해야 한다.",
+          "suggested_direction": "라벨 선택 행동과 참가자 의견처럼 두 근거를 짧게 밝혀 준다.",
+          "severity": "minor"
+        }
+      ],
+      "answers": [
+        "다음 프로토타입에는 ‘Save for later’를 쓰고, 승인자에게 요청을 보내는 별도 행동에는 ‘Submit request’를 유지한다. 의도한 버튼을 눌렀다는 사실만으로 이해를 증명하지 않으며, 설명을 통해 이해를 판단했다.",
+        "‘Save for later’가 나중에 자동 제출된다는 오해를 새 참가자 8명과 명시적으로 확인해 2026년 10월 6일 출시 검토 전까지 점검해야 한다. 영어 데스크톱 세션만 했고 번역 라벨, 모바일 레이아웃, 스크린 리더 사용자, 실제 교대 마감 압박은 시험하지 않았다."
+      ]
+    }
+  ]
+}

@@ -1,44 +1,50 @@
-# No AI slop eval
+# Editing self-check
 
-Use this after the rewrite. Answer each check with pass or fail. If any check fails, fix the draft before returning it.
+Use after editing, or check the review response for detect requests. Evaluate the actual passage in context. A word match is not a failure, and an inapplicable check needs no edit. Keep this review internal unless asked to show it. Fix observed problems, not hypothetical stylistic imperfections.
 
-For detect requests, make sure the response names each pattern found with a quoted line and a short fix, without rewriting the draft.
+## Fidelity first
 
-## Editing principles
+- Does the result preserve the source's claims, numbers, names, attribution, conditions, exceptions, uncertainty, and degree of obligation?
+- Did any edit invent an actor, mechanism, example, statistic, source, experience, or opinion?
+- Are quotations, code, URLs, identifiers, and quoted UI/error text unchanged unless the user asked to edit them?
+- Are unresolved factual gaps still visible rather than silently resolved? A missing source must not become an unqualified assertion.
 
-1. Does the edit preserve the user's point without adding claims, examples, stats, quotes, or opinions?
-2. Does it preserve the writer's distinctive vocabulary, cadence, bluntness, humor, uncertainty, digressions, and level of polish?
-3. Does it leave strong human sentences alone instead of rewriting them for consistency or making every paragraph equally tidy?
-4. Is the amount of cutting proportional to the actual slop, with no aggressive compression that strips out character?
-5. Does the draft lead with what the reader needs while keeping personal setup that adds context, tension, or character?
-6. Are points front-loaded where that improves clarity without forcing every unit into the same structure?
-7. Do sentences earn their place, with concrete facts, protected details, and direct verbs where the draft supports them?
-8. Does every generic sentence pass the portability test, or was it cut or made specific to this subject?
-9. Does the draft use active voice with human subjects where possible?
-10. Does the edit keep useful edge and preserve structure unless the structure was hurting the piece?
-11. Are genuinely tangled sentences fixed while clear spoken cadence, fragments, and changes in pace remain intact?
+## Fit and voice
 
-## Words to cut
+- Does the draft fit the reader, purpose, genre, destination, and requested house style?
+- Is it still in the requested language, with intentional mixed-language terms preserved?
+- Does it retain the writer's recognizable formality, cadence, humor, uncertainty, and useful detail?
+- Did already-clear passages stay intact? Did simplification avoid becoming slang, forced informality, or excessive compression?
 
-1. Are banned words, filler phrases, often-empty adverbs, and inflated claims removed unless quoted as examples?
+## Clarity and flow
 
-## Patterns to cut
+- Are needlessly inflated words and tangled noun phrases made clearer without losing technical precision?
+- Are the words familiar to the intended reader, including in formal reports? Could a broad label be replaced by the specific action already described, and are the replacement words actually simpler?
+- Are subjects, actions, referents, and the scope of conditions clear where readers need them?
+- Where several people or times appear, can the reader pair each actor with the right action and time? Are scheduled reviews, delivery deadlines, and fallback triggers distinct, with any missing rule flagged rather than invented?
+- Do sentences build a paragraph and paragraphs advance the argument, with useful transitions retained?
+- Is repetition removed only when it contributes no context, synthesis, emphasis, or navigation?
+- Do openings provide needed context and endings complete the task without an imposed hook, slogan, or abrupt promotional turn?
+- Are recurring contrasts, dramatic reveals, vague praise, and mechanical symmetry fixed where they impede the piece, while useful contrasts and templates survive?
+- Can you restate the central point and any required next step accurately from the result, without rereading the original to repair a misunderstanding? A fluent or highly rated passage still needs correction if a critical condition is lost.
 
-1. Are binary contrasts, negative listings, rhetorical setups, and throat-clearing openers removed?
-2. Are faux-insight setups, colon reveals, superficial analysis, fake-strong verbs, synonym cycling, dramatic fragments, and robotic rhythm fixed?
-3. Are importance puffery and weasel attribution replaced with plain facts and named sources, or flagged for the user when no source exists?
-4. Is interpretive metadiscourse removed, including authorial metacommentary, reader guidance, emphasis markers, and redundant glossing?
-5. Are fake-profound kicker lines deleted instead of rewritten into better metaphors?
-6. Are summary-recap endings cut so the piece ends on a concrete point, takeaway, or next action?
-7. Is formatting slop removed: Emoji headings, decorative bold, bullets that should be prose, headers over tiny sections?
-8. Are colons sentence case unless grammar, a proper noun, a title, or code requires otherwise?
-9. Are em dashes used sparingly: Usually none in short copy, and only 1-2 in longer drafts when they clearly help?
+## Long-form continuity
 
-## Final read
+- Does each section have the context it needs, including definitions, exceptions, and prerequisites introduced before the reader relies on them?
+- After moving material, do the transitions and references still connect, without invented causal links or a forced template?
+- Did editing preserve the argument's supporting examples, distinct viewpoints, unresolved disagreement, and personal detail instead of silently summarizing them away?
+- Was the complete source checked again, including material absent from any fact list? Are quoted spans exact, and are quantities, responsibility, and conditions still attached to the right subjects?
 
-1. Does the draft avoid robotic symmetry, repeated sentence shapes, and stacked punchy fragments?
-2. Would the writer recognize the edited draft as their own voice?
-3. Would the edited draft sound natural if read to a sharp colleague?
-4. Does the final output include the full edited draft and a short **What changed** section?
-5. For detect requests, does the response name each pattern with a quoted line and a short fix, without rewriting, scoring, or claiming AI authorship?
-6. For a non-English draft, is the draft still in its original language and checked against the matching file in `references/`?
+## Language and destination
+
+- For English, were legitimate technical terms, ordinary system subjects, meaningful hedges, pronouns, contractions, and purposeful punctuation preserved?
+- For Korean, were awkward 호응, 번역투, 명사 나열, 이중 피동, 사물존칭, and empty modifiers addressed without banning natural subjects, negation, or common terminology?
+- Is Korean speech level appropriate and consistent in the narrator's prose, with quotes and deliberate dialogue treated separately? Repeated ‘다’ endings are not a defect.
+- For source summaries, do names, categories, counts, and distinctions still match the supplied material? Are inconsistencies flagged rather than guessed at?
+- Will formatting and references work in the requested destination without arbitrary sentence limits, mandatory bold leads, or removal of useful structure?
+
+## Response contract
+
+- For edit requests, did you return the edited text and a brief substantive change note, or only the text when requested?
+- For detect requests, did you give quoted evidence, a named issue, its effect, and a local suggestion without a full rewrite, numerical scoring, or an authorship claim?
+- If the text needs no changes, did you say so or return it unchanged as requested, rather than manufacture findings?

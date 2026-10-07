@@ -1,0 +1,24 @@
+[
+  {
+    "id": "ko-slack",
+    "genre": "Slack request",
+    "audience": "문구 검토 동료 민서",
+    "file": "texts/ko-slack.md",
+    "questions": [
+      "누가 어디에 어떤 결과를 언제까지 남겨야 하는가? 그 뒤 누가 언제 디자인팀에 전달하는가?",
+      "기한을 지키기 어렵다면 언제 무엇을 알려야 하며, 누가 어떤 대안을 진행하는가?"
+    ],
+    "author_queries": []
+  },
+  {
+    "id": "en-professional",
+    "genre": "professional usability study report",
+    "audience": "Non-specialist product leads deciding which label to test next",
+    "file": "texts/en-professional.md",
+    "questions": [
+      "What wording is recommended, for which stage, and does a correct button click prove that people understood it?",
+      "What remaining misunderstanding must be checked, with whom and by when, and which broader groups or conditions were not tested?"
+    ],
+    "author_queries": []
+  }
+]

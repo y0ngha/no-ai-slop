@@ -1,0 +1,140 @@
+[
+  {
+    "id": "en-technical",
+    "genre": "technical explanation",
+    "audience": "Junior engineers maintaining a fictional search refresh worker",
+    "editing_request": "Edit for clarity, natural wording, and suitable pacing while preserving meaning, voice, uncertainty, and concrete details. The facts list is explicitly non-exhaustive; preserve all meaningful information in the source, not only listed facts. Do not invent facts.",
+    "facts": [
+      "Alder uses a document store as the source of truth and a separately refreshed search index.",
+      "The worker runs every five minutes, building a separate generation from a snapshot of published documents.",
+      "snapshot_at records snapshot time, not build completion time.",
+      "Checks require that the generation opens, all indexed documents have IDs, and document count changes by no more than 15%; larger differences require human review.",
+      "A failed check preserves the active pointer; passing checks permit an atomic pointer change. Existing requests may finish using the old generation.",
+      "After a refresh failure, the active generation is eligible only when its age at request start is at most 20 minutes, calculated using the server clock.",
+      "Exactly 20 minutes is eligible; 20 minutes and one second is ineligible. A slow successful build does not reset snapshot age.",
+      "Eligible fallback results have stale: true and the specified notice. An empty list is a valid result and must not trigger a different-generation retry.",
+      "An absent or over-age active generation returns HTTP 503, the specified error code, and no result items.",
+      "No unrestricted database-query fallback is provided because permissions and load would differ.",
+      "Tests use a fixed clock for the age boundary and verify failed count checks preserve the pointer. Generation age and failed-refresh count are separate metrics; retries never extend an existing snapshot deadline."
+    ],
+    "protected_spans": [
+      "Alder",
+      "gen_204",
+      "snapshot_at",
+      "request_started_at - snapshot_at",
+      "stale: true",
+      "Results may be up to 20 minutes old.",
+      "SEARCH_TEMPORARILY_UNAVAILABLE",
+      "Search is temporarily unavailable. Please try again shortly.",
+      "15%",
+      "HTTP 503"
+    ]
+  },
+  {
+    "id": "en-professional",
+    "genre": "professional usability study report",
+    "audience": "Non-specialist product leads deciding which label to test next",
+    "editing_request": "Edit for clarity, natural wording, and suitable pacing while preserving meaning, voice, uncertainty, and concrete details. The facts list is explicitly non-exhaustive; preserve all meaningful information in the source, not only listed facts. Do not invent facts.",
+    "facts": [
+      "The Cedar prototype compares Save draft (A) with Save for later (B) for retaining an unfinished request; Submit request sends it to an approver.",
+      "The screen otherwise stayed identical and the prototype sent no real requests.",
+      "Twelve participants attended moderated English desktop sessions on 14 and 15 September 2026. All arranged shifts monthly or more often; none had used Cedar.",
+      "Six saw each version first; all completed a task in each version with different names and dates. Balanced order does not eliminate learning effects.",
+      "On first exposure five of six Version B participants and three of six Version A participants chose the intended action without prompting.",
+      "Across exposures nine explained no approver notification in B and seven in A; one participant clicked correctly in both but still expected a manager alert.",
+      "Four associated draft with email; three found draft technical or uncommon in scheduling. Two asked whether Save for later would automatically submit later.",
+      "Recommend Save for later in the next prototype with the specified confirmation sentence and retain Submit request. This is not release approval and adds no automatic submission.",
+      "A second round with eight new participants should explicitly check the automatic-submission misunderstanding before a 6 October 2026 release review.",
+      "Translations, mobile, screen readers, and real deadline pressure were not tested; the study does not prove overall usability improvement."
+    ],
+    "protected_spans": [
+      "Cedar",
+      "Save draft",
+      "Save for later",
+      "Submit request",
+      "Only you can see this until you submit it.",
+      "14 and 15 September 2026",
+      "6 October 2026"
+    ]
+  },
+  {
+    "id": "en-general",
+    "genre": "everyday personal article",
+    "audience": "General readers interested in neighbourhood life",
+    "editing_request": "Edit for clarity, natural wording, and suitable pacing while preserving meaning, voice, uncertainty, and concrete details. The facts list is explicitly non-exhaustive; preserve all meaningful information in the source, not only listed facts. Do not invent facts. Keep the warm, restrained first-person voice and avoid turning the experience into a sweeping life lesson.",
+    "facts": [
+      "A fourteen-flat building has a shared tool cupboard by the back gate.",
+      "The narrator supported the idea but avoided borrowing for almost a month despite a loose shelf, fearing damage attribution and overdue returns.",
+      "Ruth lives on the ground floor and showed the narrator the loan notebook and the scratched drill.",
+      "The drill case has a warning about a sticking battery.",
+      "The narrator borrowed on Saturday, promised Sunday, spent twenty minutes fixing the shelf and five cleaning the case, and returned it on Sunday.",
+      "The narrator contributed a socket set in a blue tin with a flat number underneath.",
+      "Another borrower reported a previously missing smallest socket; the narrator found it in a kitchen drawer where it had been for months.",
+      "Loans last no more than three days unless a longer loan is arranged with the owner.",
+      "The narrator still double-checks the notebook but now borrows tools and knows Ruth better."
+    ],
+    "protected_spans": [
+      "Ruth",
+      "Name, flat, tool, return day,",
+      "Battery sticks. Pull straight."
+    ]
+  },
+  {
+    "id": "en-business",
+    "genre": "cross-team handover plan",
+    "audience": "Launch, Support, IT, Finance, and Sales teams running a fictional pilot",
+    "editing_request": "Edit for clarity, natural wording, and suitable pacing while preserving meaning, voice, uncertainty, and concrete details. The facts list is explicitly non-exhaustive; preserve all meaningful information in the source, not only listed facts. Do not invent facts. Make responsibilities, readiness conditions, and dates easy to locate without changing scope.",
+    "facts": [
+      "Support becomes the six Beacon pilot customers' first contact at 09:00 UTC on 19 October 2026 if readiness is confirmed; Launch owns unresolved setup defects through 30 October 2026.",
+      "The definitive scope list is beacon-pilot-register-v3; included work is inbound questions, access requests, and incident-update coordination. New onboarding and subscription changes are excluded; Sales owns commercial questions.",
+      "Launch lead Maya Chen delivers account notes, known issues, and a walkthrough by 17:00 UTC on 14 October. Notes require a primary contact and dated open commitments.",
+      "Support lead Arun Patel reports gaps by 12:00 UTC on 15 October; Maya resolves them by 16:00 UTC on 16 October, all in 2026.",
+      "IT must grant four Support agents pilot-console access and Finance must confirm a billing escalation contact by 12:00 UTC on 16 October 2026. Arun checks both.",
+      "If either dependency remains open at 16:00 UTC on 16 October, Arun marks BEACON-42 Not ready and Launch keeps customer requests. Next review is 12:00 UTC on 19 October and does not automatically transfer ownership.",
+      "When ready on 16 October, Arun marks BEACON-42 Ready for transfer; Maya then sends customer contact instructions.",
+      "In the first week Support sends Launch setup defects with account, reproduction steps, and impact, and keeps communicating with the customer.",
+      "Maya and Arun review open setup defects at 15:00 UTC on 30 October 2026. Remaining defects need engineering owners and next-update dates before Launch responsibility ends; Arun owns the ongoing queue."
+    ],
+    "protected_spans": [
+      "Beacon",
+      "beacon-pilot-register-v3",
+      "Maya Chen",
+      "Arun Patel",
+      "BEACON-42",
+      "Not ready",
+      "Ready for transfer",
+      "09:00 UTC on 19 October 2026",
+      "17:00 UTC on 14 October 2026",
+      "12:00 UTC on 15 October 2026",
+      "16:00 UTC on 16 October 2026",
+      "12:00 UTC on 16 October 2026",
+      "12:00 UTC on 19 October 2026",
+      "15:00 UTC on 30 October 2026"
+    ]
+  },
+  {
+    "id": "en-slack",
+    "genre": "polite Slack request",
+    "audience": "Priya, who owns the customer naming check for a demo",
+    "editing_request": "Edit for clarity, natural wording, and suitable pacing while preserving meaning, voice, uncertainty, and concrete details. The facts list is explicitly non-exhaustive; preserve all meaningful information in the source, not only listed facts. Do not invent facts. Keep the tone collegial and the message suitable for Slack.",
+    "facts": [
+      "Priya must check three account names in demo-accounts-v2 and reply in the thread with approval or corrections by 15:00 UTC on 8 October 2026.",
+      "Priya owns the naming check; the sender applies slide corrections.",
+      "Leo records the Northstar walkthrough at 16:00 UTC on the same day and names need to match across slides and recording.",
+      "If unable to finish, Priya should notify the thread by the same 15:00 UTC deadline.",
+      "Without approval by the deadline the sender uses Sample account A, Sample account B, and Sample account C in both materials."
+    ],
+    "protected_spans": [
+      "Priya",
+      "Northstar",
+      "demo-accounts-v2",
+      "Approved",
+      "15:00 UTC on 8 October 2026",
+      "Leo",
+      "16:00 UTC",
+      "Sample account A",
+      "Sample account B",
+      "Sample account C"
+    ]
+  }
+]

@@ -1,0 +1,34 @@
+{
+  "cases": [
+    {
+      "id": "ko-slack",
+      "verdict": "pass",
+      "issues": []
+    },
+    {
+      "id": "en-professional",
+      "verdict": "pass",
+      "issues": []
+    },
+    {
+      "id": "en-business",
+      "verdict": "pass",
+      "issues": []
+    },
+    {
+      "id": "en-slack",
+      "verdict": "pass",
+      "issues": []
+    },
+    {
+      "id": "ko-holdout",
+      "verdict": "pass",
+      "issues": []
+    },
+    {
+      "id": "en-holdout",
+      "verdict": "pass",
+      "issues": []
+    }
+  ]
+}
